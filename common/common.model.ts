@@ -53,4 +53,6 @@ export type QueryParamModel<T> = FilterModel<T> & {
     _start?: number;
 };
 
-
+export interface DbLinkModel {
+    id: number
+}
