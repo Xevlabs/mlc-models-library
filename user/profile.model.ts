@@ -1,8 +1,8 @@
-import { DbLinkModel, TimestampModel } from '@/typings';
-import { RoleModel } from '@/typings/roles/roles.model';
-import { CountryModel } from '@/typings/country/country.model';
-import { TitleEnum } from '@/typings/user/title.enum';
-import { ProvidersEnum } from '@/typings/user/providers.enum';
+import { DbLinkModel, TimestampModel } from '../common/common.model';
+import { RoleModel } from '../roles/roles.model';
+import { CountryModel } from '../country/country.model';
+import { TitleEnum } from './title.enum';
+import { ProvidersEnum } from './providers.enum';
 
 export interface ProfileModel extends TimestampModel, Omit<ExtendedBaseProfileForm, 'role' | 'placeOfBirth'> {
     id: string;

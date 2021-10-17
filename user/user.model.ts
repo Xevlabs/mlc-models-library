@@ -1,4 +1,4 @@
-import { ProfileModel } from '@/typings/user/profile.model';
+import { ProfileModel } from './profile.model';
 
 export interface UserModel extends ProfileModel {
     resetPasswordToken?: string;
