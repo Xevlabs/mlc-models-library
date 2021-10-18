@@ -1,4 +1,4 @@
-import { LocalizedModel } from '@/typings/localization/localization.model';
+import { LocalizedModel } from '../localization/localization.model';
 
 export interface TranslationFormModel {
     key: string,
