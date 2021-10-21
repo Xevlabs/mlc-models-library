@@ -1,10 +1,10 @@
 export enum ClientRolesEnum {
-    CLIENT = "client"
+    CLIENT = 'client'
 }
 
 export enum AdminRolesEnum {
-    ADMIN= "admin",
-    SUPER_ADMIN= "super_admin",
+    ADMIN= 'admin',
+    SUPER_ADMIN= 'super_admin',
 }
 
 export type RolesEnum = ClientRolesEnum | AdminRolesEnum
