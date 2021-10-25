@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/ban-types */
 
 // https://strapi.io/documentation/developer-docs/latest/development/backend-customization.html#model-options
-import { FilterOperatorEnum } from '@/typings/enums/filter-operator.enum';
+import { FilterOperatorEnum } from '../enums/filter-operator.enum';
 
 export interface TimestampModel {
     created_at: string;

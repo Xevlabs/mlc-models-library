@@ -1,4 +1,4 @@
-import { TimestampModel } from '@/typings';
+import { TimestampModel } from '../common/common.model';
 
 export interface BaseModel extends TimestampModel {
     id: number,
