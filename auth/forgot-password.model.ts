@@ -1,4 +1,4 @@
 export interface ForgotPasswordModel {
     email: string,
-    url: string
+    url?: string
 }
