@@ -4,6 +4,6 @@ export interface ConnectionLogModel extends BaseModel, ConnectionLogFormModel {}
 
 export interface ConnectionLogFormModel {
     ip: string,
-    user_agent: string,
+    userAgent: string,
     user: number
 }
