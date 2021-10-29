@@ -6,8 +6,8 @@ import { SocioProfessionalCategoryEnum } from '../enums/socio-professional-categ
 import { BusinessSectorEnum } from '../enums/business-sector.enum';
 import { DbLinkModel } from '../common/common.model';
 import { IncomeRangeEnum } from '../enums/income-range.enum';
-import { BaseProfileForm } from '@/typings/user/profile.model';
-import { TitleEnum } from '@/typings/user/title.enum';
+import { BaseProfileForm } from './profile.model';
+import { TitleEnum } from './title.enum';
 
 export interface ClientModel extends UserModel {
     clientInfos: ClientInfoModel,
