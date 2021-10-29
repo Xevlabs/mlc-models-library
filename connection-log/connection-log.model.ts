@@ -1,4 +1,4 @@
-import { BaseModel } from '@/typings/base/base.model';
+import { BaseModel } from '../base/base.model';
 
 export interface ConnectionLogModel extends BaseModel, ConnectionLogFormModel {}
 
