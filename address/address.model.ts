@@ -14,6 +14,5 @@ export interface AddressFormModel {
     country: DbLinkModel,
     city: string,
     state: string,
-    phone: string,
-    isActive: boolean
+    phone: string
 }
