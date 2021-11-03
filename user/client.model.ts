@@ -29,8 +29,7 @@ export interface ClientRegistrationFormModel {
     socioProfessionalCategory : SocioProfessionalCategoryEnum,
     businessSector : BusinessSectorEnum,
     password: string,
-    passwordConfirmation : string,
-    acceptedDocuments: DbLinkModel[]
+    passwordConfirmation : string
 }
 
 export interface ClientProfileFormModel extends BaseProfileForm {
