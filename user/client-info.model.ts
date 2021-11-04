@@ -3,7 +3,6 @@ import { TreezorUserModel } from './treezor-user.model';
 import { FireblocksUserModel } from './fireblocks-user.model';
 import { DbLinkModel } from '../common/common.model';
 import { AddressModel } from '../address/address.model';
-import { ClientModel } from '@/typings';
 
 export interface ClientInfoModel extends BaseModel {
     treezorUser: TreezorUserModel,
