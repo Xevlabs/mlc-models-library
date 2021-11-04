@@ -34,7 +34,7 @@ export interface TreezorApiUserFormModel {
 }
 
 export interface TreezorApiUserModel {
-    userId: number,
+    userId: string,
     userTypeId: 1,
     userStatus: string,
     specifiedUSPerson: boolean,
@@ -47,16 +47,16 @@ export interface TreezorApiUserModel {
 
 export interface TreezorApiWalletFormModel {
     walletTypeId: 10,
-    tariffId: number,
-    userId: number,
+    tariffId: string,
+    userId: string,
     currency: 'EUR',
     eventName: string
 }
 
 export interface TreezorApiWalletModel extends Omit<TreezorApiWalletFormModel, 'currency'> {
-    walletId: number,
+    walletId: string,
     walletStatus: string,
-    jointUserId: number,
+    jointUserId: string,
     bic: string,
     iban: string,
     solde: number,
