@@ -33,6 +33,7 @@ export interface ClientRegistrationFormModel {
 }
 
 export interface ClientProfileFormModel extends BaseProfileForm {
-    clientInfos: DbLinkModel,
-    clientKyc?: DbLinkModel
+    clientInfo: DbLinkModel,
+    clientKyc?: DbLinkModel,
+    username: string
 }
