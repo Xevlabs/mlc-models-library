@@ -4,11 +4,10 @@ import { CountryModel } from '../country/country.model';
 import { TitleEnum } from './title.enum';
 import { ProvidersEnum } from './providers.enum';
 
-export interface ProfileModel extends TimestampModel, BlockedForm, Omit<ExtendedBaseProfileForm, 'role' | 'placeOfBirth'> {
+export interface ProfileModel extends TimestampModel, Omit<ExtendedBaseProfileForm, 'role' | 'placeOfBirth'> {
     id: string;
     email: string;
     provider: ProvidersEnum;
-    confirmed: boolean;
     role: RoleModel;
     placeOfBirth: CountryModel;
 }
@@ -21,12 +20,13 @@ export interface BaseProfileForm {
     role: DbLinkModel;
     password: string;
     phone: string;
-    placeOfBirth: DbLinkModel
+    placeOfBirth: DbLinkModel;
 }
 
 
-export interface ExtendedBaseProfileForm extends BaseProfileForm {
+export interface ExtendedBaseProfileForm extends BaseProfileForm, BlockedForm {
     username: string;
+    confirmed: boolean;
 }
 
 export interface BlockedForm {
