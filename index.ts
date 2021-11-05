@@ -14,3 +14,4 @@ export * from './user/client-kyc.model';
 export * from './user/fireblocks-user.model';
 export * from './user/treezor-user.model';
 export * from './constants/admin-roles.constant'
+export * from './document/document.model';
