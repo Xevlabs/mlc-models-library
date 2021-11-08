@@ -13,6 +13,7 @@ export * from './user/client-info.model';
 export * from './user/client-kyc.model';
 export * from './user/fireblocks-user.model';
 export * from './user/treezor-user.model';
-export * from './constants/admin-roles.constant'
+export * from './constants/admin-roles.constant';
+export * from './document/document.model';
 export * from './treezor-auth-token/treezor-auth-token.model';
 export * from './treezor-api/treezor-api.model';
