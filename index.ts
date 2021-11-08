@@ -17,3 +17,4 @@ export * from './constants/admin-roles.constant';
 export * from './document/document.model';
 export * from './treezor-auth-token/treezor-auth-token.model';
 export * from './treezor-api/treezor-api.model';
+export * from './enums/treezor-api-user-status.enum';

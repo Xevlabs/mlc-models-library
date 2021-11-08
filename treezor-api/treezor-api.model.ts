@@ -1,6 +1,8 @@
-import { TitleEnum } from '@/typings/user/title.enum';
-import { TreezorKycLevelEnum } from '@/typings/enums/treezor-kyc-level.enum';
-import { TreezorKycReviewStatusEnum } from '@/typings/enums/treezor-kyc-review-status.enum';
+import { TitleEnum } from '../user/title.enum';
+import { TreezorKycLevelEnum } from '../enums/treezor-kyc-level.enum';
+import { TreezorKycReviewStatusEnum } from '../enums/treezor-kyc-review-status.enum';
+import { IncomeRangeEnum } from '../enums/income-range.enum';
+import { TreezorApiUserStatusEnum } from '../enums/treezor-api-user-status.enum';
 
 export interface TreezorAuthRequestModel {
     grant_type: 'client_credentials',
@@ -27,16 +29,20 @@ export interface TreezorApiUserFormModel {
     address3?: string,
     postcode: string,
     city: string,
-    state: string,
     country: string,
     phone: string,
-    userTag: string
+    userTag: string,
+    placeOfBirth: string,
+    birthCountry: string,
+    incomeRange: IncomeRangeEnum,
+    nationality: string,
+    userStatus?: TreezorApiUserStatusEnum
 }
 
 export interface TreezorApiUserModel {
     userId: string,
     userTypeId: 1,
-    userStatus: string,
+    userStatus: TreezorApiUserStatusEnum,
     specifiedUSPerson: boolean,
     title: TitleEnum,
     firstname: string,
