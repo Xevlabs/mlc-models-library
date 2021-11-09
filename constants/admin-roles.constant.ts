@@ -1,3 +1,3 @@
-import { AdminRolesEnum } from '@/typings';
+import { AdminRolesEnum } from '../roles/roles.enum';
 
 export const adminRoles = Object.values(AdminRolesEnum);
