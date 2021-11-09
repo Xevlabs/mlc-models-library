@@ -6,5 +6,6 @@ export interface TreezorUserModel extends TreezorUserFormModel, TimestampModel {
 
 export interface TreezorUserFormModel {
     treezorId: string,
-    walletId: string
+    walletId: string,
+    iban: string
 }

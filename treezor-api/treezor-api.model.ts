@@ -48,7 +48,8 @@ export interface TreezorApiUserModel {
     firstname: string,
     lastname: string,
     kycLevel: TreezorKycLevelEnum,
-    kycReview: TreezorKycReviewStatusEnum
+    kycReview: TreezorKycReviewStatusEnum,
+    walletCount: number
 }
 
 export interface TreezorApiWalletFormModel {
