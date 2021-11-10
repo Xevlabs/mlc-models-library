@@ -1,5 +1,5 @@
 export enum TitleEnum {
-    MR = 'MR',
-    MRS = 'MRS',
-    OTHER = 'OTHER'
+    M = 'M',
+    MME = 'MME',
+    MLLE = 'MLLE'
 }

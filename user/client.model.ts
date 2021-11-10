@@ -23,9 +23,10 @@ export interface ClientRegistrationFormModel {
     address : AddressFormModel,
     dateOfBirth : string,
     placeOfBirth : DbLinkModel,
+    cityOfBirth : string,
     nationality : string,
     usCitizen : boolean,
-    incomeBracket : IncomeRangeEnum,
+    incomeRange : IncomeRangeEnum,
     socioProfessionalCategory : SocioProfessionalCategoryEnum,
     businessSector : BusinessSectorEnum,
     password: string,
@@ -33,6 +34,9 @@ export interface ClientRegistrationFormModel {
 }
 
 export interface ClientProfileFormModel extends BaseProfileForm {
-    clientInfos: DbLinkModel,
-    clientKyc?: DbLinkModel
+    clientInfo: DbLinkModel,
+    clientKyc?: DbLinkModel,
+    username: string,
+    blocked: boolean,
+    confirmed: boolean
 }
