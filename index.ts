@@ -6,7 +6,6 @@ export * from './translation/translation.model';
 export * from './connection-log/connection-log.model';
 export * from './settings/settings.model';
 export * from './document/document.model';
-export * from './treezor-auth-token/treezor-auth-token.model';
 export * from './treezor-api/treezor-api.model';
 
 // ENUM EXPORTS
