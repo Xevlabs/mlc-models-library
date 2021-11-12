@@ -24,11 +24,12 @@ export interface ClientRegistrationFormModel {
     dateOfBirth : string,
     placeOfBirth : DbLinkModel,
     cityOfBirth : string,
-    nationality : string,
+    nationality : DbLinkModel,
     usCitizen : boolean,
     incomeRange : IncomeRangeEnum,
     socioProfessionalCategory : SocioProfessionalCategoryEnum,
     businessSector : BusinessSectorEnum,
+    signedDocuments: DbLinkModel[],
     password: string,
     passwordConfirmation : string
 }
