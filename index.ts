@@ -7,6 +7,7 @@ export * from './connection-log/connection-log.model';
 export * from './settings/settings.model';
 export * from './document/document.model';
 export * from './treezor-api/treezor-api.model';
+export * from './nationality/nationality.model';
 
 // ENUM EXPORTS
 export * from './roles/roles.enum';
@@ -15,6 +16,7 @@ export * from './enums/income-range.enum';
 export * from './enums/socio-professional-category.enum';
 export * from './user/title.enum';
 export * from './enums/treezor-api-user-status.enum';
+export * from './enums/client-account-status.enum';
 
 // CONSTANTS EXPORTS
 export * from './constants/admin-roles.constant'
