@@ -13,6 +13,6 @@ export interface AddressFormModel {
     postCode: string,
     country: DbLinkModel,
     city: string,
-    state: string,
+    state?: string,
     phone: string
 }
