@@ -1,6 +1,6 @@
 import { UserModel } from './user.model';
 import { ClientInfoModel } from './client-info.model';
-import { ClientKycModel } from './client-kyc.model';
+import { UserKycModel } from './user-kyc.model';
 import { AddressFormModel } from '../address/address.model';
 import { SocioProfessionalCategoryEnum } from '../enums/socio-professional-category.enum';
 import { BusinessSectorEnum } from '../enums/business-sector.enum';
@@ -11,7 +11,7 @@ import { TitleEnum } from './title.enum';
 
 export interface ClientModel extends UserModel {
     clientInfos: ClientInfoModel,
-    clientKyc?: ClientKycModel
+    clientKyc?: UserKycModel
 }
 
 export interface ClientRegistrationFormModel {
