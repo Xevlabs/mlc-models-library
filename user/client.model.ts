@@ -41,3 +41,10 @@ export interface ClientProfileFormModel extends BaseProfileForm {
     blocked: boolean,
     confirmed: boolean
 }
+
+export interface ClientRegistrationResponseBodyModel {
+    jwt: string,
+    user: ClientModel,
+    iban: string,
+    kycLink: string
+}
