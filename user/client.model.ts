@@ -11,7 +11,7 @@ import { TitleEnum } from './title.enum';
 
 export interface ClientModel extends UserModel {
     clientInfos: ClientInfoModel,
-    clientKyc?: UserKycModel
+    userKyc?: UserKycModel
 }
 
 export interface ClientRegistrationFormModel {
@@ -35,8 +35,8 @@ export interface ClientRegistrationFormModel {
 }
 
 export interface ClientProfileFormModel extends BaseProfileForm {
-    clientInfo: DbLinkModel,
-    clientKyc?: DbLinkModel,
+    clientInfo: number,
+    userKyc?: DbLinkModel,
     username: string,
     blocked: boolean,
     confirmed: boolean
@@ -46,5 +46,5 @@ export interface ClientRegistrationResponseBodyModel {
     jwt: string,
     user: ClientModel,
     iban: string,
-    kycLink: string
+    treezorKycLivenessLink: string
 }

@@ -8,6 +8,11 @@ import { IncomeRangeEnum } from '../enums/income-range.enum';
 import { SocioProfessionalCategoryEnum } from '../enums/socio-professional-category.enum';
 import { BusinessSectorEnum } from '../enums/business-sector.enum';
 import { ClientAccountStatusEnum } from '../enums/client-account-status.enum';
+import { ClientModel } from './client.model';
+
+export interface ExtendedClientInfoModel extends ClientInfoModel {
+    user: ClientModel
+}
 
 export interface ClientInfoModel extends BaseModel, CommonClientInfoModel {
     treezorUser: TreezorUserModel,

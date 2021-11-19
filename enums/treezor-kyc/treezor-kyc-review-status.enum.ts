@@ -1,6 +1,6 @@
 export enum TreezorKycReviewStatusEnum {
+    INVESTIGATING = 'INVESTIGATING',
     NONE = 'NONE',
-    INVESTIGATING = 'LIGHT',
     PENDING = 'PENDING',
     VALIDATED = 'VALIDATED',
     REFUSED = 'REFUSED'

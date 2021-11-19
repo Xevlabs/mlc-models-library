@@ -1,6 +1,4 @@
 import { TitleEnum } from '../user/title.enum';
-import { TreezorKycLevelEnum } from '../enums/treezor-kyc-level.enum';
-import { TreezorKycReviewStatusEnum } from '../enums/treezor-kyc-review-status.enum';
 import { IncomeRangeEnum } from '../enums/income-range.enum';
 import { TreezorApiUserStatusEnum } from '../enums/treezor-api-user-status.enum';
 
@@ -29,6 +27,7 @@ export interface TreezorApiUserFormModel {
     address3?: string,
     postcode: string,
     city: string,
+    state?: string,
     country: string,
     phone: string,
     userTag: string,
@@ -41,15 +40,24 @@ export interface TreezorApiUserFormModel {
 
 export interface TreezorApiUserModel {
     userId: string,
-    userTypeId: 1,
+    userTypeId: '1',
     userStatus: TreezorApiUserStatusEnum,
     specifiedUSPerson: boolean,
     title: TitleEnum,
     firstname: string,
     lastname: string,
-    kycLevel: TreezorKycLevelEnum,
-    kycReview: TreezorKycReviewStatusEnum,
+    userTag: string,
+    kycLevel: string,
+    kycReview: string,
     walletCount: number
+}
+
+export interface TreezorApiKycReviewUserModel {
+    userId: string,
+    userTypeId: '1',
+    kycLevel: string,
+    kycReview: string,
+    kycReviewComment?: string
 }
 
 export interface TreezorApiWalletFormModel {
