@@ -1,6 +1,6 @@
 import { UserModel } from './user.model';
 import { ClientInfoModel } from './client-info.model';
-import { UserKycModel } from './user-kyc.model';
+import { ClientKycModel } from './kyc/client-kyc.model';
 import { AddressFormModel } from '../address/address.model';
 import { SocioProfessionalCategoryEnum } from '../enums/socio-professional-category.enum';
 import { BusinessSectorEnum } from '../enums/business-sector.enum';
@@ -11,7 +11,7 @@ import { TitleEnum } from './title.enum';
 
 export interface ClientModel extends UserModel {
     clientInfos: ClientInfoModel,
-    userKyc?: UserKycModel
+    clientKyc?: ClientKycModel
 }
 
 export interface ClientRegistrationFormModel {
@@ -36,7 +36,7 @@ export interface ClientRegistrationFormModel {
 
 export interface ClientProfileFormModel extends BaseProfileForm {
     clientInfo: number,
-    userKyc?: DbLinkModel,
+    clientKyc?: DbLinkModel,
     username: string,
     blocked: boolean,
     confirmed: boolean

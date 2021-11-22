@@ -49,6 +49,7 @@ export interface TreezorApiUserModel {
     userTag: string,
     kycLevel: string,
     kycReview: string,
+    kycReviewComment: string,
     walletCount: number
 }
 
