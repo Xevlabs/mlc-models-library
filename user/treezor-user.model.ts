@@ -1,6 +1,6 @@
 import { TimestampModel } from '../common/common.model';
 import { ExtendedClientInfoModel } from './client-info.model';
-import { ClientKycModel } from '@/typings';
+import { ClientKycModel } from './kyc/client-kyc.model';
 
 export interface ExtendedTreezorUserModel extends TreezorUserModel {
     clientInfo: ExtendedClientInfoModel;
