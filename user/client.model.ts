@@ -34,9 +34,10 @@ export interface ClientRegistrationFormModel {
     passwordConfirmation : string
 }
 
-export interface ClientProfileFormModel extends BaseProfileForm {
+export interface StrapiClientProfileFormModel extends BaseProfileForm {
     clientInfo: number,
     clientKyc?: DbLinkModel,
+    provider: 'local',
     username: string,
     blocked: boolean,
     confirmed: boolean
