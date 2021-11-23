@@ -10,7 +10,7 @@ import { BaseProfileForm } from './profile.model';
 import { TitleEnum } from './title.enum';
 
 export interface ClientModel extends UserModel {
-    clientInfos: ClientInfoModel,
+    clientInfo: ClientInfoModel,
     clientKyc?: ClientKycModel
 }
 
