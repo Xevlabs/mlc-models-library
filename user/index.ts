@@ -6,3 +6,4 @@ export * from './fireblocks-user.model';
 export * from './profile.model';
 export * from './treezor-user.model';
 export * from './user.model';
+export * from './kyc/kyc-log.model';

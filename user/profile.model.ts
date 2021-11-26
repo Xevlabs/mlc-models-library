@@ -31,4 +31,5 @@ export interface ExtendedBaseProfileForm extends BaseProfileForm, BlockedForm {
 
 export interface BlockedForm {
     blocked: boolean;
+    comment?: string;
 }
