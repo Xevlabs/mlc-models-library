@@ -14,8 +14,13 @@ export interface TreezorAuthResponseModel {
     access_token: string,
 }
 
-export interface TreezorApiUserFormModel {
+export interface TreezorApiUserFormModel extends TreezorApiUserEditionFormModel {
     userTypeId: 1,
+    userTag: string,
+    userStatus?: TreezorApiUserStatusEnum
+}
+
+export interface TreezorApiUserEditionFormModel {
     specifiedUSPerson: boolean,
     title: TitleEnum,
     firstname: string,
@@ -30,12 +35,11 @@ export interface TreezorApiUserFormModel {
     state?: string,
     country: string,
     phone: string,
-    userTag: string,
     placeOfBirth: string,
     birthCountry: string,
     incomeRange: IncomeRangeEnum,
     nationality: string,
-    userStatus?: TreezorApiUserStatusEnum
+    legalSector: string
 }
 
 export interface TreezorApiUserModel {

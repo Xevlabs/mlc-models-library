@@ -14,13 +14,20 @@ export interface ClientModel extends UserModel {
     clientKyc?: ClientKycModel
 }
 
-export interface ClientRegistrationFormModel {
+export interface ClientRegistrationFormModel extends Omit<ClientEditionFormModel, 'address'> {
+    signedDocuments: DbLinkModel[],
+    password: string,
+    passwordConfirmation : string,
+    address : AddressFormModel
+}
+
+export interface ClientEditionFormModel {
     firstName: string,
     lastName: string,
     title : TitleEnum,
     phone: string,
     email: string,
-    address : AddressFormModel,
+    address : DbLinkModel,
     dateOfBirth : string,
     placeOfBirth : DbLinkModel,
     cityOfBirth : string,
@@ -28,10 +35,7 @@ export interface ClientRegistrationFormModel {
     usCitizen : boolean,
     incomeRange : IncomeRangeEnum,
     socioProfessionalCategory : SocioProfessionalCategoryEnum,
-    businessSector : BusinessSectorEnum,
-    signedDocuments: DbLinkModel[],
-    password: string,
-    passwordConfirmation : string
+    businessSector : BusinessSectorEnum
 }
 
 export interface StrapiClientProfileFormModel extends BaseProfileForm {
