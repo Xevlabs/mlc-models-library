@@ -10,6 +10,8 @@ export * from './treezor-api/treezor-api.model';
 export * from './nationality/nationality.model';
 export * from './treezor-webhook/treezor-webhook.model';
 export * from './treezor-webhook/treezor-kyc-liveness-payload.model';
+export * from './roles/roles.model';
+export * from './address/address.model';
 
 // ENUM EXPORTS
 export * from './roles/roles.enum';
