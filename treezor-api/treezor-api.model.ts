@@ -1,6 +1,7 @@
 import { TitleEnum } from '../user/title.enum';
 import { IncomeRangeEnum } from '../enums/income-range.enum';
 import { TreezorApiUserStatusEnum } from '../enums/treezor-api-user-status.enum';
+import { TreezorApiWalletStatusEnum } from '../enums/treezor-api-wallet-status.enum';
 
 export interface TreezorAuthRequestModel {
     grant_type: 'client_credentials',
@@ -75,12 +76,30 @@ export interface TreezorApiWalletFormModel {
 
 export interface TreezorApiWalletModel extends Omit<TreezorApiWalletFormModel, 'currency'> {
     walletId: string,
-    walletStatus: string,
+    walletStatus: TreezorApiWalletStatusEnum,
     jointUserId: string,
+    walletTag: string,
+    eventDate: string,
+    eventMessage: string,
+    eventAlias: string,
+    eventPayinStartDate: string,
+    eventPayinEndDate: string,
+    contractSigned: boolean,
+    urlImage: string,
+    createdDate: string,
+    modifiedDate: string,
+    userFirstname: string,
+    userLastName: string,
+    codeStatus: string,
+    informationStatus: string,
+    payinCount: number,
+    payoutCount: number,
+    transferCount: number,
     bic: string,
     iban: string,
     solde: number,
-    authorizedBalance: number
+    authorizedBalance: number,
+    totalRows: number
 }
 
 export interface TreezorKycUrlResponseModel {

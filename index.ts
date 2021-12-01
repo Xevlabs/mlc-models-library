@@ -20,6 +20,7 @@ export * from './enums/income-range.enum';
 export * from './enums/socio-professional-category.enum';
 export * from './user/title.enum';
 export * from './enums/treezor-api-user-status.enum';
+export * from './enums/treezor-api-wallet-status.enum';
 export * from './enums/client-account-status.enum';
 export * from './enums/treezor-webhook/treezor-webhook-type.enum';
 export * from './enums/treezor-webhook/treezor-webhook-payload-type.enum';
