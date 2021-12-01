@@ -21,6 +21,10 @@ export interface ClientRegistrationFormModel extends Omit<ClientEditionFormModel
     address : AddressFormModel
 }
 
+export interface ExtendedClientEditionFormModel extends ClientEditionFormModel {
+    username: string;
+}
+
 export interface ClientEditionFormModel {
     firstName: string,
     lastName: string,
