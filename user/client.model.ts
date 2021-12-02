@@ -21,7 +21,7 @@ export interface ClientRegistrationFormModel extends Omit<ClientEditionFormModel
     address : AddressFormModel
 }
 
-export interface ExtendedClientEditionFormModel extends ClientEditionFormModel {
+export interface StrapiExtendedClientEditionModel extends ClientEditionFormModel {
     username: string;
 }
 
