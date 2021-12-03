@@ -10,6 +10,6 @@ export interface NoteFormModel {
     details: string
 }
 
-export interface StrapiExtendedNoteModel {
+export interface StrapiExtendedNoteModel extends NoteFormModel {
     user: DbLinkModel
 }
