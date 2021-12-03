@@ -1,12 +1,15 @@
 import { ClientModel } from '../user/client.model';
-import { DbLinkModel } from '../common/common.model';
 import { BaseModel } from '../base/base.model';
+import { DbLinkModel } from '../common/common.model';
 
-export interface NoteModel extends BaseModel, Omit<NoteFormModel, 'user'> {
+export interface NoteModel extends BaseModel, NoteFormModel {
     user: ClientModel
 }
 
 export interface NoteFormModel {
-    details: string,
-    user?: DbLinkModel
+    details: string
+}
+
+export interface StrapiExtendedNoteModel {
+    user: DbLinkModel
 }
