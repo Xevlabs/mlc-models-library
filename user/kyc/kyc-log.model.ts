@@ -6,7 +6,7 @@ import { KycStatusEnum } from '../../enums/kyc-status.enum';
 export interface KycLogModel extends Omit<StrapiKycLogFormModel, 'client' | 'created_by_user'> {
     id: number,
     client: ClientModel,
-    created_by_user: number
+    created_by_user: ClientModel
 }
 
 export interface StrapiKycLogFormModel {

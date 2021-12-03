@@ -12,6 +12,7 @@ export * from './treezor-webhook/treezor-webhook.model';
 export * from './treezor-webhook/treezor-kyc-liveness-payload.model';
 export * from './roles/roles.model';
 export * from './address/address.model';
+export * from './note/note.model';
 
 // ENUM EXPORTS
 export * from './roles/roles.enum';
