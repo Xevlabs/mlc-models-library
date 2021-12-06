@@ -23,11 +23,13 @@ export interface ClientInfoModel extends BaseModel, CommonClientInfoModel {
 }
 
 export interface ClientInfoFormModel extends CommonClientInfoModel {
+    user?: string,
     treezorUser?: DbLinkModel,
     fireblocksUser?: DbLinkModel,
     addresses: DbLinkModel[],
     mainAddress: DbLinkModel,
-    nationality: DbLinkModel
+    nationality: DbLinkModel,
+    updated_by_user?: DbLinkModel
 }
 
 interface CommonClientInfoModel {

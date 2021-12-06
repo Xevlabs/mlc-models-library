@@ -43,12 +43,13 @@ export interface ClientEditionFormModel {
 }
 
 export interface StrapiClientProfileFormModel extends BaseProfileForm {
-    clientInfo: number,
+    clientInfo?: number,
     clientKyc?: DbLinkModel,
     provider: 'local',
     username: string,
     blocked: boolean,
-    confirmed: boolean
+    confirmed: boolean,
+    updated_by_user?: DbLinkModel
 }
 
 export interface ClientRegistrationResponseBodyModel {
