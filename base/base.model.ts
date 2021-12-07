@@ -13,6 +13,7 @@ export interface StrapiBaseModel {
 }
 
 export interface PopulatedBaseModel {
-    updated_by_user: ClientModel,
-    created_by_user: ClientModel
+    id: number,
+    updated_by_user?: ClientModel,
+    created_by_user?: ClientModel
 }
