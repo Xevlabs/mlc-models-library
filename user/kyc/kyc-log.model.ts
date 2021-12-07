@@ -2,7 +2,7 @@ import { DbLinkModel } from '../../common/common.model';
 import { ClientModel } from '../client.model';
 import { ClientAccountStatusEnum } from '../../enums/client-account-status.enum';
 import { KycStatusEnum } from '../../enums/kyc-status.enum';
-import { KycHistoryOperationTypeEnum } from '@/typings/enums/kyc-history-operation-type.enum';
+import { KycHistoryOperationTypeEnum } from '../../enums/kyc-history-operation-type.enum';
 
 export interface KycLogModel extends Omit<StrapiKycLogFormModel, 'client' | 'created_by_user'> {
     id: number,
