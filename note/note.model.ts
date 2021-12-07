@@ -1,8 +1,8 @@
 import { ClientModel } from '../user/client.model';
-import { BaseModel } from '../base/base.model';
+import { PopulatedBaseModel } from '../base/base.model';
 import { DbLinkModel } from '../common/common.model';
 
-export interface NoteModel extends BaseModel, NoteFormModel {
+export interface NoteModel extends PopulatedBaseModel, NoteFormModel {
     user: ClientModel
 }
 

@@ -1,4 +1,5 @@
 import { DbLinkModel, TimestampModel } from '../common/common.model';
+import { ClientModel } from '../user';
 
 export interface BaseModel extends TimestampModel {
     id: number,
@@ -9,4 +10,10 @@ export interface BaseModel extends TimestampModel {
 export interface StrapiBaseModel {
     updated_by_user: DbLinkModel,
     created_by_user: DbLinkModel
+}
+
+export interface PopulatedBaseModel {
+    id: number,
+    updated_by_user?: ClientModel,
+    created_by_user?: ClientModel
 }
