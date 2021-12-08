@@ -12,7 +12,7 @@ export interface StrapiBaseModel {
     created_by_user: DbLinkModel
 }
 
-export interface PopulatedBaseModel {
+export interface PopulatedBaseModel extends TimestampModel {
     id: number,
     updated_by_user?: ClientModel,
     created_by_user?: ClientModel
