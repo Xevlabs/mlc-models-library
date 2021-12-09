@@ -3,11 +3,11 @@ import { ClientModel } from '../client.model';
 import { ClientAccountStatusEnum } from '../../enums/client-account-status.enum';
 import { KycStatusEnum } from '../../enums/kyc-status.enum';
 import { KycHistoryOperationTypeEnum } from '../../enums/kyc-history-operation-type.enum';
+import { PopulatedBaseModel } from '../../base/base.model';
 
-export interface KycLogModel extends Omit<StrapiKycLogFormModel, 'client' | 'created_by_user'> {
+export interface KycLogModel extends PopulatedBaseModel, Omit<StrapiKycLogFormModel, 'client' | 'created_by_user'> {
     id: number,
     client: ClientModel,
-    created_by_user: ClientModel
 }
 
 export interface StrapiKycLogFormModel {
