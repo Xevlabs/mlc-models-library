@@ -13,6 +13,7 @@ export * from './treezor-webhook/treezor-kyc-liveness-payload.model';
 export * from './roles/roles.model';
 export * from './address/address.model';
 export * from './note/note.model';
+export * from './treezor-kyc-document/treezor-kyc-document.model';
 
 // ENUM EXPORTS
 export * from './roles/roles.enum';
@@ -28,6 +29,7 @@ export * from './enums/treezor-webhook/treezor-webhook-payload-type.enum';
 export * from './enums/treezor-kyc/treezor-kyc-level.enum';
 export * from './enums/treezor-kyc/treezor-kyc-liveness-score.enum';
 export * from './enums/treezor-kyc/treezor-kyc-review-status.enum';
+export * from './enums/treezor-kyc/treezor-kyc-document-status.enum';
 export * from './enums/kyc-status.enum';
 export * from './enums/kyc-risk-level.enum';
 
