@@ -2,9 +2,11 @@ import { BaseModel } from '../../base/base.model';
 import { KycStatusEnum } from '../../enums/kyc-status.enum';
 import { TreezorKycAbstractModel } from './treezor-kyc-abstract.model';
 import { KycRiskLevelEnum } from '../../enums/kyc-risk-level.enum';
+import { TreezorKycDocumentModel } from '@/typings';
 
 export interface ClientKycModel extends BaseModel, Omit<StrapiClientKycCreationModel, 'treezorKycAbstract'>, Partial<ClientKycScoreRelatedFields> {
-    treezorKycAbstract: TreezorKycAbstractModel
+    treezorKycAbstract: TreezorKycAbstractModel,
+    treezorDocuments: TreezorKycDocumentModel[]
 }
 
 export interface StrapiClientKycCreationModel {
