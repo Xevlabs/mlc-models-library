@@ -27,6 +27,7 @@ export interface BaseProfileForm {
 export interface ExtendedBaseProfileForm extends BaseProfileForm, BlockedForm {
     username: string;
     confirmed: boolean;
+    updated_by_user?: DbLinkModel;
 }
 
 export interface BlockedForm {
