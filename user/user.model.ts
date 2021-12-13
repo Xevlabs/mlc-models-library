@@ -1,6 +1,6 @@
 import { ProfileModel } from './profile.model';
 
-export interface UserModel extends ProfileModel {
+export interface UserModel extends Omit<ProfileModel, 'updated_by_user'> {
     resetPasswordToken?: string;
     confirmationToken?: string;
     phoneNumConfirmToken?: string;
