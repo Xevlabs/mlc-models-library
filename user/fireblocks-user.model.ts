@@ -5,8 +5,6 @@ export interface FireblocksUserModel extends FireblocksUserFormModel, TimestampM
 }
 
 export interface FireblocksUserFormModel {
-    fireblocksId: string,
     walletId: string,
-    vaultId: string,
     clientInfo: number
 }
