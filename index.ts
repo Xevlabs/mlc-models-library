@@ -32,6 +32,7 @@ export * from './enums/treezor-kyc/treezor-kyc-review-status.enum';
 export * from './enums/treezor-kyc/treezor-kyc-document-status.enum';
 export * from './enums/kyc-status.enum';
 export * from './enums/kyc-risk-level.enum';
+export * from './enums/kyc-history-operation-type.enum';
 
 // CONSTANTS EXPORTS
 export * from './constants/admin-roles.constant';
