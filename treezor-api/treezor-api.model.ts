@@ -108,3 +108,7 @@ export interface TreezorKycUrlResponseModel {
         'identification-url': string
     }
 }
+
+export interface TreezorKycDocumentUrlResponseModel {
+    url: string;
+}
