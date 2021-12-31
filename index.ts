@@ -36,3 +36,5 @@ export * from './enums/kyc-history-operation-type.enum';
 
 // CONSTANTS EXPORTS
 export * from './constants/admin-roles.constant';
+export * from './common-treezor-wallet/common-treezor-wallet.model';
+export * from './common-fireblocks-wallet/common-fireblocks-wallet.model';
