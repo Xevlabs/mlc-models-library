@@ -1,6 +1,7 @@
 import { TreezorCommonWalletTypeEnum } from '../enums/common-wallets/treezor-common-wallet-type.enum';
 
 export interface CommonTreezorWalletModel {
+    id: number,
     walletId: number,
     walletTypeId: number,
     walletStatus: string,
