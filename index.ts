@@ -14,6 +14,7 @@ export * from './roles/roles.model';
 export * from './address/address.model';
 export * from './note/note.model';
 export * from './treezor-kyc-document/treezor-kyc-document.model';
+export * from './fireblocks-webhook/fireblocks-webhook.model';
 
 // ENUM EXPORTS
 export * from './roles/roles.enum';
@@ -33,6 +34,7 @@ export * from './enums/treezor-kyc/treezor-kyc-document-status.enum';
 export * from './enums/kyc-status.enum';
 export * from './enums/kyc-risk-level.enum';
 export * from './enums/kyc-history-operation-type.enum';
+export * from './enums/fireblocks-webhook-type.enum';
 
 // CONSTANTS EXPORTS
 export * from './constants/admin-roles.constant';
