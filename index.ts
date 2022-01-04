@@ -14,6 +14,8 @@ export * from './roles/roles.model';
 export * from './address/address.model';
 export * from './note/note.model';
 export * from './treezor-kyc-document/treezor-kyc-document.model';
+export * from './common-treezor-wallet/common-treezor-wallet.model';
+export * from './common-fireblocks-wallet/common-fireblocks-wallet.model';
 export * from './fireblocks-webhook/fireblocks-webhook.model';
 
 // ENUM EXPORTS
@@ -38,3 +40,4 @@ export * from './enums/fireblocks-webhook-type.enum';
 
 // CONSTANTS EXPORTS
 export * from './constants/admin-roles.constant';
+
