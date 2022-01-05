@@ -1,6 +1,6 @@
-import { InternalWalletAsset } from 'fireblocks-sdk/dist/types';
+import { AssetResponse } from 'fireblocks-sdk/dist/types';
 
-export interface ExtendedFireblocksWalletAsset extends InternalWalletAsset {
+export interface ExtendedFireblocksWalletAsset extends AssetResponse {
     value: {
         currency: 'EUR',
         marketPrice: number,

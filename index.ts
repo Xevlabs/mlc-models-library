@@ -17,6 +17,8 @@ export * from './treezor-kyc-document/treezor-kyc-document.model';
 export * from './common-treezor-wallet/common-treezor-wallet.model';
 export * from './common-fireblocks-wallet/common-fireblocks-wallet.model';
 export * from './fireblocks-webhook/fireblocks-webhook.model';
+export * from './common-fireblocks-wallet/extended-fireblocks-vault-account';
+export * from './common-fireblocks-wallet/extended-fireblocks-wallet-asset';
 
 // ENUM EXPORTS
 export * from './roles/roles.enum';
