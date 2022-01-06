@@ -4,6 +4,6 @@ export interface ExtendedFireblocksVaultAsset extends AssetResponse {
     value: {
         currency: 'EUR',
         marketPrice: number,
-        walletValue: number
+        walletValue: number | null
     }
 }
