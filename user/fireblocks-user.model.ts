@@ -5,6 +5,10 @@ export interface FireblocksUserModel extends FireblocksUserFormModel, TimestampM
 }
 
 export interface FireblocksUserFormModel {
-    walletId: string,
+    vaultId: string,
+    name: string,
+    customerRefId?: string,
+    autoFuel: boolean,
+    hiddenOnUI: boolean;
     clientInfo: number
 }
