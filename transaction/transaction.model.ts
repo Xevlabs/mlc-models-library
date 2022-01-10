@@ -2,7 +2,8 @@ import { DbLinkModel } from '../common/common.model';
 import { TransactionTypeEnum } from '../enums/transaction-type.enum';
 import { BaseModel } from '../base/base.model';
 import { TransactionStatusEnum } from '../enums/transaction-status.enum';
-import { TreezorTransferModel } from '@/typings';
+import { TreezorTransferModel } from '../treezor-transfer/treezor-transfer.model';
+import { TransactionErrorModel } from '@/typings';
 
 export interface TransactionModel extends Omit<StrapiTransactionFormModel, 'created_by_user'>, BaseModel {
     treezorTransfers?: TreezorTransferModel[]
@@ -18,4 +19,9 @@ export interface StrapiTransactionFormModel extends TransactionFormModel{
 
 export interface TransactionFormModel {
     amount: number
+}
+
+export interface StrapiTransactionAndErrorsModel {
+    transaction: TransactionModel,
+    newErrors: TransactionErrorModel[]
 }

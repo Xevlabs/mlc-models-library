@@ -1,3 +1,3 @@
 export enum TransactionOperationTypeEnum {
-    DEPOSIT = 'DEPOSIT'
+    CREATE_DEPOSIT = 'CREATE_DEPOSIT'
 }

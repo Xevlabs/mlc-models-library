@@ -21,6 +21,9 @@ export * from './common-fireblocks-vault/extended-fireblocks-vault-account';
 export * from './common-fireblocks-vault/extended-fireblocks-vault-asset';
 export * from './transaction/transaction.model';
 export * from './treezor-transfer/treezor-transfer.model';
+export * from './transaction-error/transaction-error.model';
+export * from './treezor-transfer-log/treezor-transfer-log.model';
+export * from './transaction-history/transaction-history.model';
 
 // ENUM EXPORTS
 export * from './roles/roles.enum';

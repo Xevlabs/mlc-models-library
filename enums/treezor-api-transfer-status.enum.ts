@@ -1,4 +1,6 @@
 export enum TreezorApiTransferStatusEnum {
+    CREATED = 'CREATED',
+    REQUEST_FAILED = 'REQUEST_FAILED',
     AWATING_WEBHOOK = 'AWAITING_WEBHOOK',
     VALIDATED = 'VALIDATED',
     CANCELLED = 'CANCELLED',
