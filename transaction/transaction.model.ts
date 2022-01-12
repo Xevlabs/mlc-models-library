@@ -3,10 +3,12 @@ import { TransactionTypeEnum } from '../enums/transaction-type.enum';
 import { BaseModel } from '../base/base.model';
 import { TransactionStatusEnum } from '../enums/transaction-status.enum';
 import { TreezorTransferModel } from '../treezor-transfer/treezor-transfer.model';
-import { TransactionErrorModel } from '@/typings';
+import { TransactionErrorModel } from '../transaction-error/transaction-error.model';
 
-export interface TransactionModel extends Omit<StrapiTransactionFormModel, 'created_by_user'>, BaseModel {
-    treezorTransfers?: TreezorTransferModel[]
+export interface TransactionModel extends Omit<StrapiTransactionFormModel, 'created_by_user' | 'user'>, BaseModel {
+    treezorTransfers?: TreezorTransferModel[],
+    created_by_user: number,
+    user: number
 }
 
 export interface StrapiTransactionFormModel extends TransactionFormModel{

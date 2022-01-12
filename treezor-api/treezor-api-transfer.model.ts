@@ -23,5 +23,8 @@ export interface TreezorApiTransferModel extends Omit<TreezorApiTransferFormMode
     transferTypeId: number,
     createdDate: string,
     modifiedDate: string,
-    totalRows: number
+    foreignId: number,
+    partnerFee: number,
+    codeStatus: string,
+    informationStatus: string
 }

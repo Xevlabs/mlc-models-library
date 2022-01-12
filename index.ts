@@ -24,6 +24,8 @@ export * from './treezor-transfer/treezor-transfer.model';
 export * from './transaction-error/transaction-error.model';
 export * from './treezor-transfer-log/treezor-transfer-log.model';
 export * from './transaction-history/transaction-history.model';
+export * from './fireblocks-transaction/fireblocks-transaction.model';
+export * from './fireblocks-transaction-log/fireblocks-transaction-log.model';
 
 // ENUM EXPORTS
 export * from './roles/roles.enum';

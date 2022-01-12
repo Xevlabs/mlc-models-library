@@ -1,8 +1,15 @@
 import { BaseModel } from '../base/base.model';
 import { TreezorApiTransferModel } from '../treezor-api/treezor-api-transfer.model';
 import { TreezorApiTransferStatusEnum } from '../enums/treezor-api-transfer-status.enum';
+import { TransactionModel } from '../transaction/transaction.model';
 
-export interface TreezorTransferModel extends BaseModel, StrapiTreezorTransferFormModel {}
+export interface TreezorTransferModel extends BaseModel, Omit<StrapiTreezorTransferFormModel, 'transaction'> {
+    transaction: number
+}
+
+export interface ExtendedTreezorTransferModel extends Omit<TreezorTransferModel, 'transaction'> {
+    transaction: TransactionModel
+}
 
 export interface StrapiTreezorTransferFormModel extends Partial<Omit<TreezorApiTransferModel, 'amount' | 'transferStatus'>> {
     amount?: number,
