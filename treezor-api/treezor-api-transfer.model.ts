@@ -14,7 +14,7 @@ export interface TreezorApiTransferModel extends Omit<TreezorApiTransferFormMode
     transferTag: string,
     walletTypeId: number,
     beneficiaryWalletTypeId: number,
-    transferDate: string,
+    transferDate: string | null,
     walletEventName: string,
     walletAlias: string,
     beneficiaryWalletEventName: string,
