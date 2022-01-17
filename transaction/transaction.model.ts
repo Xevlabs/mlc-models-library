@@ -16,7 +16,10 @@ export interface StrapiTransactionFormModel extends TransactionFormModel{
     status: TransactionStatusEnum,
     currency: 'EUR',
     user: DbLinkModel,
-    created_by_user?: DbLinkModel
+    created_by_user?: DbLinkModel,
+    mlcEstimatedEarnings?: number,
+    mlcFinalEarnings?: number,
+    mlcEarningsAsset?: string
 }
 
 export interface TransactionFormModel {

@@ -1,10 +1,10 @@
-import { FireblocksApiTransferPeerPathTypeEnum } from '../enums/fireblocks-api/fireblocks-api-transfer-peer-path-type.enum';
 import { FireblocksApiTransactionStatusEnum } from '../enums/fireblocks-api/fireblocks-api-transaction-status.enum';
 import { FireblocksApiNetworkRecordStatusEnum } from '../enums/fireblocks-api/fireblocks-api-network-record-status.enum';
 import { FireblocksApiOperationEnum } from '../enums/fireblocks-api/fireblocks-api-operation.enum';
 import { FireblocksApiSigningAlgorithmEnum } from '../enums/fireblocks-api/fireblocks-api-signing-algorithm.enum';
 import { FireblocksApiAuthorizationInfoLogicEnum } from '../enums/fireblocks-api/fireblocks-api-authorization-info-logic.enum';
 import { FireblocksApiAddressTypeEnum } from '../enums/fireblocks-api/fireblocks-api-address-type.enum';
+import { PeerType } from 'fireblocks-sdk';
 
 export interface FireblocksApiTransactionModel {
     id: string,
@@ -101,7 +101,7 @@ export interface FireblocksApiTransactionModel {
 }
 
 interface TransferPeerPathResponse {
-    type: FireblocksApiTransferPeerPathTypeEnum,
+    type: PeerType,
     id: string,
     name: string,
     subType: string

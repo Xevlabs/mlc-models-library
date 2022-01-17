@@ -4,7 +4,8 @@ import { TreezorApiTransferStatusEnum } from '../enums/treezor-api-transfer-stat
 import { TransactionModel } from '../transaction/transaction.model';
 
 export interface TreezorTransferModel extends BaseModel, Omit<StrapiTreezorTransferFormModel, 'transaction'> {
-    transaction: number
+    transaction: number,
+    treezorTransferLogs: number[]
 }
 
 export interface ExtendedTreezorTransferModel extends Omit<TreezorTransferModel, 'transaction'> {
