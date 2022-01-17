@@ -22,7 +22,7 @@ export interface TreezorApiTransferModel extends Omit<TreezorApiTransferFormMode
     currency: string,
     transferTypeId: number,
     createdDate: string,
-    modifiedDate: string,
+    modifiedDate: string | null,
     foreignId: number,
     partnerFee: number,
     codeStatus: string,
