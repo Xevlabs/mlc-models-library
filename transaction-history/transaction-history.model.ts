@@ -7,7 +7,7 @@ export interface TransactionHistoryModel extends BaseModel, StrapiTransactionHis
 
 export interface StrapiTransactionHistoryFormModel {
     transaction: DbLinkModel,
-    status: TransactionStatusEnum,
+    transactionStatus: TransactionStatusEnum,
     operationType: TransactionOperationTypeEnum,
     payload: string,
     newTransactionErrors?: DbLinkModel[]
