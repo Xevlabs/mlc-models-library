@@ -4,4 +4,7 @@ export interface SettingsModel extends BaseModel {
     earningCoefficient: number;
     treezorBusinessId: string;
     defaultClientAsset: string;
+    kycScoreThresholdLow: number;
+    kycScoreThresholdModerate: number;
+    kycScoreThresholdHigh: number;
 }
