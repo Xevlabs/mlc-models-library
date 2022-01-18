@@ -8,10 +8,6 @@ export interface TreezorTransferModel extends BaseModel, Omit<StrapiTreezorTrans
     treezorTransferLogs: number[]
 }
 
-export interface ExtendedTreezorTransferModel extends Omit<TreezorTransferModel, 'transaction'> {
-    transaction: TransactionModel
-}
-
 export interface StrapiTreezorTransferFormModel extends Partial<Omit<TreezorApiTransferModel, 'amount' | 'transferStatus'>> {
     amount?: number,
     transaction?: number,
