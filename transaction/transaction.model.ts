@@ -5,11 +5,13 @@ import { TransactionStatusEnum } from '../enums/transaction-status.enum';
 import { TreezorTransferModel } from '../treezor-transfer/treezor-transfer.model';
 import { TransactionErrorModel } from '../transaction-error/transaction-error.model';
 import { FireblocksTransactionModel } from '../fireblocks-transaction/fireblocks-transaction.model';
-import { ClientModel } from '@/typings';
+import { ClientModel, TransactionHistoryModel } from '@/typings';
 
 export interface TransactionModel extends Omit<StrapiTransactionFormModel, 'created_by_user' | 'user'>, BaseModel {
     treezorTransfers?: TreezorTransferModel[],
     fireblocksTransactions?: FireblocksTransactionModel[],
+    transactionErrors?: TransactionErrorModel[],
+    transactionHistories?: TransactionHistoryModel[],
     user: ClientModel
 }
 
