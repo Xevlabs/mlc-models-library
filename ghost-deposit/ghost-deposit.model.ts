@@ -13,5 +13,6 @@ export interface StrapiGhostDepositFormModel {
     user: DbLinkModel,
     transaction: DbLinkModel,
     date: string,
-    earnings_eur: number
+    earnings_eur: number,
+    mlcEarningsEur: number
 }
