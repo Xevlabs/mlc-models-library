@@ -19,6 +19,14 @@ export * from './common-fireblocks-vault/common-fireblocks-vault.model';
 export * from './fireblocks-webhook/fireblocks-webhook.model';
 export * from './common-fireblocks-vault/extended-fireblocks-vault-account';
 export * from './common-fireblocks-vault/extended-fireblocks-vault-asset';
+export * from './transaction/transaction.model';
+export * from './treezor-transfer/treezor-transfer.model';
+export * from './transaction-error/transaction-error.model';
+export * from './treezor-transfer-log/treezor-transfer-log.model';
+export * from './transaction-history/transaction-history.model';
+export * from './fireblocks-transaction/fireblocks-transaction.model';
+export * from './fireblocks-transaction-log/fireblocks-transaction-log.model';
+export * from './ghost-deposit/ghost-deposit.model';
 
 // ENUM EXPORTS
 export * from './roles/roles.enum';
@@ -39,7 +47,9 @@ export * from './enums/kyc-status.enum';
 export * from './enums/kyc-risk-level.enum';
 export * from './enums/kyc-history-operation-type.enum';
 export * from './enums/fireblocks-webhook-type.enum';
+export * from './enums/transaction-type.enum';
+export * from './enums/transaction-status.enum';
+export * from './enums/mlc-earning-type.enum';
 
 // CONSTANTS EXPORTS
 export * from './constants/admin-roles.constant';
-
