@@ -35,3 +35,9 @@ export interface StrapiTransactionAndErrorsModel {
     transaction: TransactionModel,
     newErrors: TransactionErrorModel[]
 }
+
+export interface SimplifiedTransactionModel {
+    linkedTransactionId: number,
+    value: number,
+    hasErrors: boolean
+}
