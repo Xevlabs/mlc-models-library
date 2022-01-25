@@ -4,7 +4,10 @@ import { BaseModel } from '../base/base.model';
 import { TransactionStatusEnum } from '../enums/transaction-status.enum';
 import { TreezorTransferModel } from '../treezor-transfer/treezor-transfer.model';
 import { TransactionErrorModel } from '../transaction-error/transaction-error.model';
-import { FireblocksTransactionModel } from '../fireblocks-transaction/fireblocks-transaction.model';
+import {
+    FireblocksTransactionModel,
+    SimplifiedFireblocksTransactionModel
+} from '../fireblocks-transaction/fireblocks-transaction.model';
 import { ClientModel } from '../user/client.model';
 import { TransactionHistoryModel } from '../transaction-history/transaction-history.model';
 
@@ -40,4 +43,8 @@ export interface SimplifiedTransactionModel {
     linkedTransactionId: number,
     value: number,
     hasErrors: boolean
+}
+
+export interface SimplifiedTransactionWithFireblocksModel extends SimplifiedTransactionModel {
+    fireBlocksTransactions?: SimplifiedFireblocksTransactionModel[]
 }

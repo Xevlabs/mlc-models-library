@@ -15,7 +15,7 @@ export interface FireblocksTransactionModel extends BaseModel, Omit<StrapiFirebl
 }
 
 export interface StrapiFireblocksTransactionFormModel {
-    assetId?: string,
+    assetId: string,
     sourceType?: PeerType,
     sourceId?: string,
     sourceName?: string,
@@ -25,7 +25,7 @@ export interface StrapiFireblocksTransactionFormModel {
     destinationName?: string,
     destinationSubType?: string,
     requestedAmount?: number,
-    amount?: number,
+    amount: number,
     netAmount?: number,
     amountUSD?: number,
     serviceFee?: number,
@@ -52,4 +52,13 @@ export interface StrapiFireblocksTransactionFormModel {
     transaction?: number,
     type?: FireblocksCommonCustomerRef,
     mlcEarningType?: MlcEarningTypeEnum
+}
+
+export interface SimplifiedFireblocksTransactionModel {
+    id: number,
+    type: FireblocksCommonCustomerRef,
+    status: FireblocksApiTransactionStatusEnum,
+    assetId: string,
+    amount: number,
+    eurValue?: number
 }
