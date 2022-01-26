@@ -7,3 +7,7 @@ export interface ExtendedFireblocksVaultAsset extends AssetResponse {
         walletValue: number | null
     }
 }
+
+export interface AdjustedFireblocksVaultAsset extends Pick<ExtendedFireblocksVaultAsset, 'value' | 'id' | 'total'> {
+
+}

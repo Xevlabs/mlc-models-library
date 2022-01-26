@@ -28,6 +28,7 @@ export * from './fireblocks-transaction/fireblocks-transaction.model';
 export * from './fireblocks-transaction-log/fireblocks-transaction-log.model';
 export * from './ghost-deposit/ghost-deposit.model';
 export * from './adjusted-treezor-wallet/adjusted-treezor-wallet.model';
+export * from './adjusted-fireblocks-vault/adjusted-fireblocks-vault.model';
 
 // ENUM EXPORTS
 export * from './roles/roles.enum';
