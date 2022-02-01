@@ -48,3 +48,17 @@ export interface SimplifiedTransactionModel {
 export interface SimplifiedTransactionWithFireblocksModel extends SimplifiedTransactionModel {
     fireBlocksTransactions?: SimplifiedFireblocksTransactionModel[]
 }
+
+export interface TransactionDetailsModel extends Omit<TransactionModel, 'user' | 'updated_by_user' | 'created_at' | 'updated_at' | 'treezorTransfers' | ' fireblocksTransactions'> {
+    date_of_demand: string,
+    date_of_completion: string,
+    investedAmount: number,
+    clientEurEarnings: number,
+    days_of_investment: number,
+    mlcFinalEarnings:  number | undefined,
+    movements: {
+        treezorCommonWallet: Partial<TreezorTransferModel>[] | undefined,
+        fireblocksCommonWallet: Partial<FireblocksTransactionModel>[] | undefined,
+        fireblocksPrivateWallet: Partial<FireblocksTransactionModel>[] | undefined
+    }
+}
