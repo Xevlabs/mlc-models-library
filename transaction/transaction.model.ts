@@ -51,10 +51,10 @@ export interface SimplifiedTransactionWithFireblocksModel extends SimplifiedTran
 
 export interface TransactionDetailsModel extends Omit<TransactionModel, 'user' | 'updated_by_user' | 'created_at' | 'updated_at' | 'treezorTransfers' | ' fireblocksTransactions'> {
     date_of_demand: string,
-    date_of_completion: string,
-    investedAmount: number,
-    clientEurEarnings: number,
-    days_of_investment: number,
+    date_of_completion: string | undefined,
+    investedAmount: number | undefined,
+    clientEurEarnings: number | undefined,
+    days_of_investment: number | undefined,
     mlcFinalEarnings:  number | undefined,
     movements: {
         treezorCommonWallet: Partial<TreezorTransferModel>[] | undefined,
