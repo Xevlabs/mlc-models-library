@@ -5,11 +5,11 @@ import { FireblocksCommonCustomerRef } from '../enums/common-wallets/fireblocks-
 import { BaseModel } from '../base/base.model';
 import { MlcEarningTypeEnum } from '../enums/mlc-earning-type.enum';
 import { PeerType } from 'fireblocks-sdk';
-import { TransactionModel } from '../transaction/transaction.model';
+import { NonPopulatedTransactionModel } from '../transaction/transaction.model';
 
 export interface FireblocksTransactionModel extends BaseModel, Omit<StrapiFireblocksTransactionFormModel, 'transaction'> {
     fireblocksTransactionLogs: number[]
-    transaction: TransactionModel,
+    transaction: NonPopulatedTransactionModel,
     type: FireblocksCommonCustomerRef,
     destinationType: PeerType
 }

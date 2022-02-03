@@ -1,6 +1,6 @@
 import { DbLinkModel } from '../common/common.model';
 import { TransactionTypeEnum } from '../enums/transaction-type.enum';
-import { BaseModel } from '../base/base.model';
+import { BaseModel, PopulatedBaseModel } from '../base/base.model';
 import { TransactionStatusEnum } from '../enums/transaction-status.enum';
 import { TreezorTransferModel } from '../treezor-transfer/treezor-transfer.model';
 import { TransactionErrorModel } from '../transaction-error/transaction-error.model';
@@ -11,12 +11,19 @@ import {
 import { ClientModel } from '../user/client.model';
 import { TransactionHistoryModel } from '../transaction-history/transaction-history.model';
 
-export interface TransactionModel extends Omit<StrapiTransactionFormModel, 'created_by_user' | 'user'>, BaseModel {
+export interface TransactionModel extends BaseTransactionModel, PopulatedBaseModel {
+    user: ClientModel
+}
+
+export interface NonPopulatedTransactionModel extends BaseTransactionModel, BaseModel {
+    user: number
+}
+
+interface BaseTransactionModel extends Omit<StrapiTransactionFormModel, 'created_by_user' | 'updated_by_user' | 'user'> {
     treezorTransfers?: TreezorTransferModel[],
     fireblocksTransactions?: FireblocksTransactionModel[],
     transactionErrors?: TransactionErrorModel[],
-    transactionHistories?: TransactionHistoryModel[],
-    user: ClientModel
+    transactionHistories?: TransactionHistoryModel[]
 }
 
 export interface StrapiTransactionFormModel extends TransactionFormModel{
@@ -35,7 +42,7 @@ export interface TransactionFormModel {
 }
 
 export interface StrapiTransactionAndErrorsModel {
-    transaction: TransactionModel,
+    transaction: TransactionModel | NonPopulatedTransactionModel,
     newErrors: TransactionErrorModel[]
 }
 
