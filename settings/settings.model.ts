@@ -8,3 +8,7 @@ export interface SettingsModel extends BaseModel {
     kycScoreThresholdModerate: number;
     kycScoreThresholdHigh: number;
 }
+
+export interface ExtendedSettingsModel extends SettingsModel {
+    yearlyGlobalInterestRate: number;
+}
