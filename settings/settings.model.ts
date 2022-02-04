@@ -9,6 +9,6 @@ export interface SettingsModel extends BaseModel {
     kycScoreThresholdHigh: number;
 }
 
-export interface ExtendedSettingsModel extends Omit<SettingsModel, 'id' | 'updated_by_user' | 'created_by_user' | 'created_at' | 'updated_at'> {
+export interface ExtendedSettingsModel extends SettingsModel {
     yearlyGlobalInterestRate: number;
 }
