@@ -30,6 +30,8 @@ export * from './ghost-deposit/ghost-deposit.model';
 export * from './adjusted-treezor-wallet/adjusted-treezor-wallet.model';
 export * from './adjusted-fireblocks-vault/adjusted-fireblocks-vault.model';
 export * from './investment/investment.model'
+export * from './world-check-info/world-check-info.model';
+export * from './world-check-settings/world-check-settings.model';
 
 // ENUM EXPORTS
 export * from './roles/roles.enum';
