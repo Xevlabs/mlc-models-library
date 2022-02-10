@@ -1,4 +1,4 @@
-import { WorldCheckApiFieldResultEnum } from '@/typings/enums/world-check-api/world-check-api-field-result.enum';
+import { WorldCheckApiFieldResultEnum } from '../enums/world-check-api/world-check-api-field-result.enum';
 
 export interface WorldCheckApiScreeningRequestModel {
     groupId: string,
