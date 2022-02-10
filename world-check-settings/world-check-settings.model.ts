@@ -1,4 +1,4 @@
-import { PopulatedBaseModel } from '@/typings/base/base.model';
+import { PopulatedBaseModel } from '../base/base.model';
 
 export interface WorldCheckSettingsModel extends PopulatedBaseModel {
     groupId: string,
