@@ -6,6 +6,7 @@ export interface TreezorWebhookModel extends BaseModel, TreezorWebhookFormModel 
 
 export interface TreezorReceivedWebhookModel<T> {
     webhook?: string | TreezorWebhookTypeEnum,
+    SubscribeURL?: string,
     webhook_id?: string,
     webhook_created_at?: string,
     object?: string | TreezorWebhookPayloadTypeEnum,

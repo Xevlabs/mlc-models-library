@@ -7,6 +7,7 @@ export * from './connection-log/connection-log.model';
 export * from './settings/settings.model';
 export * from './document/document.model';
 export * from './treezor-api/treezor-api.model';
+export * from './treezor-api/treezor-api-token.model';
 export * from './nationality/nationality.model';
 export * from './treezor-webhook/treezor-webhook.model';
 export * from './treezor-webhook/treezor-kyc-liveness-payload.model';
