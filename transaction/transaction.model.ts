@@ -42,7 +42,7 @@ export interface TransactionFormModel {
 }
 
 export interface StrapiTransactionAndErrorsModel {
-    transaction: TransactionModel | NonPopulatedTransactionModel,
+    transaction: TransactionModel,
     newErrors: TransactionErrorModel[]
 }
 

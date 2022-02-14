@@ -5,6 +5,7 @@ import { FireblocksApiSigningAlgorithmEnum } from '../enums/fireblocks-api/fireb
 import { FireblocksApiAuthorizationInfoLogicEnum } from '../enums/fireblocks-api/fireblocks-api-authorization-info-logic.enum';
 import { FireblocksApiAddressTypeEnum } from '../enums/fireblocks-api/fireblocks-api-address-type.enum';
 import { PeerType } from 'fireblocks-sdk';
+import { FireblocksApiTransactionSubStatusEnum } from '../enums/fireblocks-api/fireblocks-api-transaction-sub-status.enum';
 
 export interface FireblocksApiTransactionModel {
     id: string,
@@ -33,7 +34,7 @@ export interface FireblocksApiTransactionModel {
     txHash: string,
     index: number,
     tag: string,
-    subStatus: FireblocksApiTransactionStatusEnum,
+    subStatus: FireblocksApiTransactionSubStatusEnum,
     sourceAddress: string,
     destinationAddress: string,
     destinationAddressDescription: string,

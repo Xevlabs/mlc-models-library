@@ -1,11 +1,13 @@
-import { DbLinkModel } from '../common/common.model';
 import { BaseModel } from '../base/base.model';
+import { TransactionErrorCodeEnum } from '../enums/transaction-error-code.enum';
+import { TransactionErrorLevelEnum } from '../enums/transaction-error-level.enum';
 
 export interface TransactionErrorModel extends BaseModel, StrapiTransactionErrorFormModel {}
 
 export interface StrapiTransactionErrorFormModel {
     transaction: number,
-    key: string,
-    treezorTransfer?: DbLinkModel,
-    fireblocksTransaction?: DbLinkModel
+    code: TransactionErrorCodeEnum,
+    level: TransactionErrorLevelEnum,
+    label: string,
+    resolved: boolean
 }
