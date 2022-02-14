@@ -22,7 +22,7 @@ export interface TreezorApiUserFormModel extends TreezorApiUserEditionFormModel 
 }
 
 export interface TreezorApiUserEditionFormModel {
-    specifiedUSPerson: boolean,
+    specifiedUSPerson: 0 | 1,
     title: TitleEnum,
     firstname: string,
     lastname: string,
@@ -40,7 +40,8 @@ export interface TreezorApiUserEditionFormModel {
     birthCountry: string,
     incomeRange: IncomeRangeEnum,
     nationality: string,
-    legalSector: string
+    legalSector: string,
+    userTypeId?: string,
 }
 
 export interface TreezorApiUserModel {
