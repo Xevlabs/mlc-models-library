@@ -52,7 +52,8 @@ export interface StrapiFireblocksTransactionFormModel {
     numOfConfirmations?: number,
     transaction?: number,
     type?: FireblocksCommonCustomerRef,
-    mlcEarningType?: MlcEarningTypeEnum
+    mlcEarningType?: MlcEarningTypeEnum,
+    fireblocksTransactionId?: string
 }
 
 export interface StrapiFireblocksTransactionEditionFormModel extends Partial<StrapiFireblocksTransactionFormModel> {
