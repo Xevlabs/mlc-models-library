@@ -5,5 +5,6 @@ export const finalFireblocksTransactionStatuses = [
     FireblocksApiTransactionStatusEnum.CANCELLED,
     FireblocksApiTransactionStatusEnum.REJECTED,
     FireblocksApiTransactionStatusEnum.BLOCKED,
-    FireblocksApiTransactionStatusEnum.FAILED
+    FireblocksApiTransactionStatusEnum.FAILED,
+    FireblocksApiTransactionStatusEnum.STRAPI_REQUEST_FAILED
 ];

@@ -6,6 +6,7 @@ import { BaseModel } from '../base/base.model';
 import { MlcEarningTypeEnum } from '../enums/mlc-earning-type.enum';
 import { PeerType } from 'fireblocks-sdk';
 import { NonPopulatedTransactionModel } from '../transaction/transaction.model';
+import { FireblocksApiTransactionSubStatusEnum } from '../enums/fireblocks-api/fireblocks-api-transaction-sub-status.enum';
 
 export interface FireblocksTransactionModel extends BaseModel, Omit<StrapiFireblocksTransactionFormModel, 'transaction'> {
     fireblocksTransactionLogs: number[]
@@ -34,7 +35,7 @@ export interface StrapiFireblocksTransactionFormModel {
     fireblocksLastUpdated?: number,
     status: FireblocksApiTransactionStatusEnum,
     tag?: string,
-    subStatus?: FireblocksApiTransactionStatusEnum,
+    subStatus?: FireblocksApiTransactionSubStatusEnum,
     sourceAddress?: string,
     destinationAddress?: string,
     destinationAddressDescription?: string,
@@ -52,6 +53,10 @@ export interface StrapiFireblocksTransactionFormModel {
     transaction?: number,
     type?: FireblocksCommonCustomerRef,
     mlcEarningType?: MlcEarningTypeEnum
+}
+
+export interface StrapiFireblocksTransactionEditionFormModel extends Partial<StrapiFireblocksTransactionFormModel> {
+    status: FireblocksApiTransactionStatusEnum
 }
 
 export interface SimplifiedFireblocksTransactionModel {
