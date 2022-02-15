@@ -15,7 +15,7 @@ export interface TreezorAuthResponseModel {
     access_token: string,
 }
 
-export interface TreezorApiUserFormModel extends TreezorApiUserEditionFormModel {
+export interface TreezorApiUserFormModel extends Omit<TreezorApiUserEditionFormModel, 'userTypeId'> {
     userTypeId: 1,
     userTag: string,
     userStatus?: TreezorApiUserStatusEnum
