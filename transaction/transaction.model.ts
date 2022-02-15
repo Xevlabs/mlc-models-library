@@ -56,7 +56,7 @@ export interface SimplifiedTransactionWithFireblocksModel extends SimplifiedTran
     fireBlocksTransactions?: SimplifiedFireblocksTransactionModel[]
 }
 
-export interface TransactionDetailsModel extends Omit<TransactionModel, 'user' | 'updated_by_user' | 'created_at' | 'updated_at' | 'treezorTransfers' | ' fireblocksTransactions'> {
+export interface TransactionDetailsModel extends Omit<TransactionModel, 'updated_by_user' | 'created_at' | 'updated_at' | 'treezorTransfers' | ' fireblocksTransactions'> {
     date_of_demand: string,
     date_of_completion?: string,
     investedAmount?: number,
