@@ -58,6 +58,7 @@ export * from './enums/transaction-status.enum';
 export * from './enums/mlc-earning-type.enum';
 export * from './enums/transaction-error-code.enum';
 export * from './enums/transaction-error-level.enum';
+export * from './enums/inputType.enum'
 
 // CONSTANTS EXPORTS
 export * from './constants/admin-roles.constant';
