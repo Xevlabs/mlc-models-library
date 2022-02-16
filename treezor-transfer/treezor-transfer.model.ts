@@ -9,7 +9,7 @@ import { TreezorTransferLogModel } from '../treezor-transfer-log/treezor-transfe
 export interface TreezorTransferModel extends BaseModel, Omit<StrapiTreezorTransferFormModel, 'transaction' | 'user'> {
     transaction: NonPopulatedTransactionModel,
     treezorTransferLogs: TreezorTransferLogModel[],
-    user: ClientModel
+    user?: ClientModel
 }
 
 export interface StrapiTreezorTransferFormModel extends Partial<Omit<TreezorApiTransferModel, 'amount' | 'transferStatus'>> {
