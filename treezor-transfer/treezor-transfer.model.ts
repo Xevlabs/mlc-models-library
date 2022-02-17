@@ -16,5 +16,6 @@ export interface StrapiTreezorTransferFormModel extends Partial<Omit<TreezorApiT
     amount?: number,
     transaction?: number,
     transferStatus: TreezorApiTransferStatusEnum,
-    user?: DbLinkModel
+    user?: DbLinkModel,
+    treezorErrorResponse?: string
 }
