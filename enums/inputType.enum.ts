@@ -1,5 +1,5 @@
 export enum InputTypeEnum {
-  TEXT = 'text',
-  NUMBER = 'number',
-  ENUM = 'enum'
+    TEXT = 'text',
+    NUMBER = 'number',
+    ENUM = 'enum'
 }
