@@ -11,5 +11,6 @@ export interface TreezorTransferModel extends BaseModel, Omit<StrapiTreezorTrans
 export interface StrapiTreezorTransferFormModel extends Partial<Omit<TreezorApiTransferModel, 'amount' | 'transferStatus'>> {
     amount?: number,
     transaction?: number,
-    transferStatus: TreezorApiTransferStatusEnum
+    transferStatus: TreezorApiTransferStatusEnum,
+    treezorErrorResponse?: string
 }
