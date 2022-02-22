@@ -33,6 +33,8 @@ export * from './adjusted-fireblocks-vault/adjusted-fireblocks-vault.model';
 export * from './investment/investment.model'
 export * from './world-check-info/world-check-info.model';
 export * from './world-check-settings/world-check-settings.model';
+export * from './beneficiary/beneficiary.model'
+export * from './beneficiary/treezor-beneficiary.model'
 
 // ENUM EXPORTS
 export * from './roles/roles.enum';
