@@ -20,8 +20,8 @@ export interface StrapiTreezorKycDocumentModel {
     documentType: string,
     fileName: string,
     thumbFileName: string,
-    createdDate: string,
-    modifiedDate: string,
+    createdDate: string | null,
+    modifiedDate: string | null,
     codeStatus: TreezorKycDocumentStatusEnum,
     informationStatus: string,
     residenceId: string
