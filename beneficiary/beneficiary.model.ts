@@ -1,6 +1,7 @@
 import { TreezorUserModel } from '..';
 
 export interface BeneficiaryModel extends Omit<StrapiBeneficiaryFormModel, 'creditor'> {
+    id: string,
     creditor: TreezorUserModel
 }
 

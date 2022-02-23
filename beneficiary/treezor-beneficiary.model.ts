@@ -1,4 +1,8 @@
-export interface TreezorBeneficiaryModel {
+export interface TreezorBeneficiaryModel extends TreezorBeneficiaryFormModel {
+    id: string;
+}
+
+export interface TreezorBeneficiaryFormModel {
     userId: number,
     name: string,
     iban: string,
