@@ -7,7 +7,6 @@ export interface ExtendedTreezorUserModel extends TreezorUserModel {
     clientInfo: ExtendedClientInfoModel;
     clientKyc: ClientKycModel;
     beneficiaries: BeneficiaryModel[];
-    
 }
 
 export interface TreezorUserModel extends Omit<TreezorUserFormModel, 'clientInfo'>, TimestampModel {

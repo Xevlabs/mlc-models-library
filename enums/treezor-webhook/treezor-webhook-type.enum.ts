@@ -67,6 +67,5 @@ export enum TreezorWebhookTypeEnum {
     'KYCLIVENESS_UPDATE' = 'kycliveness.update',
     'WALLET_CREATE' = 'wallet.create',
     'WALLET_UPDATE' = 'wallet.update',
-    'WALLET_CANCEL' = 'wallet.cancel',
-    'SEPA_STCR_INST_REJECT' = 'sepaSctrInst.reject_sctr_inst'
+    'WALLET_CANCEL' = 'wallet.cancel'
 }
