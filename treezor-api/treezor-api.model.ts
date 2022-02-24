@@ -62,8 +62,8 @@ export interface TreezorApiUserModel {
 export interface TreezorApiKycReviewUserModel {
     userId: string,
     userTypeId: '1',
-    kycLevel: string,
-    kycReview: string,
+    kycLevel: number,
+    kycReview: number,
     kycReviewComment?: string
 }
 
