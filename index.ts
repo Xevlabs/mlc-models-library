@@ -62,6 +62,7 @@ export * from './enums/mlc-earning-type.enum';
 export * from './enums/transaction-error-code.enum';
 export * from './enums/transaction-error-level.enum';
 export * from './enums/inputType.enum'
+export * from './enums/treezor-transfer-direction.enum'
 
 // CONSTANTS EXPORTS
 export * from './constants/admin-roles.constant';
