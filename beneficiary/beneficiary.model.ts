@@ -1,7 +1,7 @@
-import { TreezorUserModel } from '..';
+import { TimestampModel, TreezorUserModel } from '..';
 
-export interface BeneficiaryModel extends Omit<StrapiBeneficiaryFormModel, 'creditor'> {
-    id: string,
+export interface BeneficiaryModel extends Omit<StrapiBeneficiaryFormModel, 'creditor'>, TimestampModel {
+    id: number,
     creditor: TreezorUserModel
 }
 
