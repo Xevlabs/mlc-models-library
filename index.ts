@@ -30,12 +30,14 @@ export * from './fireblocks-transaction-log/fireblocks-transaction-log.model';
 export * from './ghost-deposit/ghost-deposit.model';
 export * from './adjusted-treezor-wallet/adjusted-treezor-wallet.model';
 export * from './adjusted-fireblocks-vault/adjusted-fireblocks-vault.model';
-export * from './investment/investment.model'
+export * from './investment/investment.model';
 export * from './world-check-info/world-check-info.model';
 export * from './world-check-settings/world-check-settings.model';
-export * from './beneficiary/beneficiary.model'
-export * from './beneficiary/treezor-beneficiary.model'
-export * from './treezor-payin/treezor-payin.model'
+export * from './beneficiary/beneficiary.model';
+export * from './beneficiary/treezor-beneficiary.model';
+export * from './treezor-payin/treezor-payin.model';
+export * from './pay-in/pay-in.model';
+export * from './pay-out/pay-out.model';
 
 // ENUM EXPORTS
 export * from './roles/roles.enum';
@@ -66,4 +68,3 @@ export * from './enums/treezor-transfer-direction.enum'
 
 // CONSTANTS EXPORTS
 export * from './constants/admin-roles.constant';
-export * from './pay-in/pay-in.model';
