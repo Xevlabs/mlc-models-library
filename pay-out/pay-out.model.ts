@@ -18,7 +18,7 @@ export interface StrapiPayoutFormModel extends Omit<TreezorApiPayoutModel, 'payo
     amount: number,
     partnerFee: number,
     userId: number,
-    codeStatus: number,
+    codeStatus: number | null,
     treezorUser?: DbLinkModel,
     beneficiary?: DbLinkModel,
     created_by_user?: DbLinkModel,
