@@ -38,6 +38,8 @@ export * from './beneficiary/treezor-beneficiary.model';
 export * from './treezor-payin/treezor-payin.model';
 export * from './pay-in/pay-in.model';
 export * from './pay-out/pay-out.model';
+export * from './kyc-transaction-category/kyc-transaction-category.model';
+export * from './kyc-transaction-category-condition/kyc-transaction-category-condition.model';
 
 // ENUM EXPORTS
 export * from './roles/roles.enum';
