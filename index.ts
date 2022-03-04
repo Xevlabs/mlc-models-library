@@ -40,6 +40,7 @@ export * from './pay-in/pay-in.model';
 export * from './pay-out/pay-out.model';
 export * from './kyc-transaction-category/kyc-transaction-category.model';
 export * from './kyc-transaction-category-condition/kyc-transaction-category-condition.model';
+export * from './mlc-doc-threshold/mlc-doc-threshold.model';
 
 // ENUM EXPORTS
 export * from './roles/roles.enum';
@@ -67,6 +68,7 @@ export * from './enums/transaction-error-code.enum';
 export * from './enums/transaction-error-level.enum';
 export * from './enums/inputType.enum'
 export * from './enums/treezor-transfer-direction.enum'
+export * from './enums/mlc-kyc-document-level.enum'
 
 // CONSTANTS EXPORTS
 export * from './constants/admin-roles.constant';
