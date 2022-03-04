@@ -5,11 +5,17 @@ import { KycRiskLevelEnum } from '../../enums/kyc-risk-level.enum';
 import { DbLinkModel } from '../../common/common.model';
 import { TreezorKycDocumentModel } from '../../treezor-kyc-document/treezor-kyc-document.model';
 import { WorldCheckInfoModel } from '../../world-check-info/world-check-info.model';
+import { ClientModel } from '../client.model';
+import { MlcKycDocumentLevelEnum } from '@/typings';
 
 export interface ClientKycModel extends BaseModel, Omit<StrapiClientKycCreationModel, 'treezorKycAbstract'>, Partial<ClientKycScoreRelatedFields> {
     treezorKycAbstract: TreezorKycAbstractModel,
     treezorDocuments: TreezorKycDocumentModel[],
     worldCheckInfo?: WorldCheckInfoModel
+}
+
+export interface StrapiPopulatedClientKycModel extends Omit<ClientKycModel, 'user'> {
+    user: ClientModel
 }
 
 export interface StrapiClientKycCreationModel {
@@ -30,5 +36,6 @@ export interface KycBaseScoreFormModel {
 interface ClientKycScoreRelatedFields {
     baseScore: number,
     currentScore: number,
-    riskProfile: KycRiskLevelEnum
+    riskProfile: KycRiskLevelEnum,
+    documentLevel?: MlcKycDocumentLevelEnum | null
 }
