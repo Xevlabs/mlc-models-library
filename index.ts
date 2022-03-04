@@ -40,6 +40,7 @@ export * from './pay-in/pay-in.model';
 export * from './pay-out/pay-out.model';
 export * from './kyc-transaction-category/kyc-transaction-category.model';
 export * from './kyc-transaction-category-condition/kyc-transaction-category-condition.model';
+export * from './kyc-document/kyc-document.model';
 
 // ENUM EXPORTS
 export * from './roles/roles.enum';
