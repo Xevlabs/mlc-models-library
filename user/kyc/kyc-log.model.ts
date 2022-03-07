@@ -6,7 +6,7 @@ import { KycHistoryOperationTypeEnum } from '../../enums/kyc-history-operation-t
 import { PopulatedBaseModel } from '../../base/base.model';
 import { KycDocumentModel } from './kyc-document.model';
 
-export interface KycLogModel extends PopulatedBaseModel, Omit<StrapiKycLogFormModel, 'client' | 'created_by_user' | 'kycDocument'> {
+export interface KycLogModel extends PopulatedBaseModel, Omit<StrapiKycLogFormModel, 'client' | 'created_by_user'> {
     id: number,
     client: ClientModel,
     kycDocument: KycDocumentModel
@@ -18,6 +18,5 @@ export interface StrapiKycLogFormModel {
     comment?: string,
     kycStatus: KycStatusEnum,
     type: KycHistoryOperationTypeEnum,
-    created_by_user?: DbLinkModel,
-    kycDocument?: DbLinkModel
+    created_by_user?: DbLinkModel
 }
