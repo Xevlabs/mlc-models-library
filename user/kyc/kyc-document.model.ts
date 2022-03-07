@@ -10,6 +10,7 @@ export interface KycDocumentModel extends PopulatedBaseModel, Omit<StrapiKycDocu
 export interface StrapiKycDocumentFormModel {
     clientKyc: DbLinkModel;
     status: KycStatusEnum;
+    title: string,
     comment?: string;
     type: string;
 }
