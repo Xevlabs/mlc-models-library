@@ -7,10 +7,12 @@ import { TreezorKycDocumentModel } from '../../treezor-kyc-document/treezor-kyc-
 import { WorldCheckInfoModel } from '../../world-check-info/world-check-info.model';
 import { ClientModel } from '../client.model';
 import { MlcKycDocumentLevelEnum } from '@/typings';
+import { KycDocumentModel } from './kyc-document.model';
 
 export interface ClientKycModel extends BaseModel, Omit<StrapiClientKycCreationModel, 'treezorKycAbstract'>, Partial<ClientKycScoreRelatedFields> {
     treezorKycAbstract: TreezorKycAbstractModel,
     treezorDocuments: TreezorKycDocumentModel[],
+    kycDocuments: KycDocumentModel[]
     worldCheckInfo?: WorldCheckInfoModel
 }
 

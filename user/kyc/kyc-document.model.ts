@@ -1,13 +1,14 @@
-import { ClientModel, DbLinkModel, KycHistoryOperationTypeEnum, KycStatusEnum } from '../..';
+import { DbLinkModel, KycHistoryOperationTypeEnum, KycStatusEnum } from '../..';
 import { PopulatedBaseModel } from '../../base/base.model';
+import { ClientKycModel } from './client-kyc.model';
 
-export interface KycDocumentModel extends PopulatedBaseModel, Omit<StrapiKycDocumentFormModel, 'client' | 'created_by_user'>{
+export interface KycDocumentModel extends PopulatedBaseModel, Omit<StrapiKycDocumentFormModel, 'clientKyc' | 'created_by_user'>{
     id: number;
-    client: ClientModel
+    clientKyc: ClientKycModel
 }
 
 export interface StrapiKycDocumentFormModel {
-    client: DbLinkModel;
+    clientKyc: DbLinkModel;
     status: KycStatusEnum;
     comment?: string;
     type: KycHistoryOperationTypeEnum;
