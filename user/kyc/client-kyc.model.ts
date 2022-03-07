@@ -6,8 +6,8 @@ import { DbLinkModel } from '../../common/common.model';
 import { TreezorKycDocumentModel } from '../../treezor-kyc-document/treezor-kyc-document.model';
 import { WorldCheckInfoModel } from '../../world-check-info/world-check-info.model';
 import { ClientModel } from '../client.model';
-import { MlcKycDocumentLevelEnum } from '@/typings';
 import { KycDocumentModel } from './kyc-document.model';
+import { MlcKycDocumentLevelEnum } from '../../enums/mlc-kyc-document-level.enum';
 
 export interface ClientKycModel extends BaseModel, Omit<StrapiClientKycCreationModel, 'treezorKycAbstract'>, Partial<ClientKycScoreRelatedFields> {
     treezorKycAbstract: TreezorKycAbstractModel,
