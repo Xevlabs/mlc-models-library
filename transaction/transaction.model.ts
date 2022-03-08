@@ -16,7 +16,7 @@ export interface NonPopulatedTransactionModel extends BaseTransactionModel, Base
 }
 
 interface BaseTransactionModel extends Omit<StrapiTransactionFormModel, 'created_by_user' | 'updated_by_user' | 'user'> {
-    treezorTransfers?: TreezorTransferModel[],
+    treezorTransfer?: TreezorTransferModel,
     transactionErrors?: TransactionErrorModel[],
     transactionHistories?: TransactionHistoryModel[]
 }
@@ -49,13 +49,13 @@ export interface SimplifiedTransactionModel {
 export interface SimplifiedTransactionWithFireblocksModel extends SimplifiedTransactionModel {
 }
 
-export interface TransactionDetailsModel extends Omit<TransactionModel, 'updated_by_user' | 'created_at' | 'updated_at' | 'treezorTransfers'> {
+export interface TransactionDetailsModel extends Omit<TransactionModel, 'updated_by_user' | 'created_at' | 'updated_at' | 'treezorTransfer'> {
     date_of_demand: string,
     date_of_completion?: string,
     investedAmount?: number,
     clientEurEarnings?: number,
     days_of_investment?: number,
     movements: {
-        treezorCommonWallet?: Partial<TreezorTransferModel>[]
+        treezorCommonWallet?: Partial<TreezorTransferModel>
     }
 }
