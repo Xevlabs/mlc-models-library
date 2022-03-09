@@ -44,9 +44,6 @@ export interface SimplifiedTransactionModel {
     hasErrors: boolean
 }
 
-export interface SimplifiedTransactionWithFireblocksModel extends SimplifiedTransactionModel {
-}
-
 export interface TransactionDetailsModel extends Omit<TransactionModel, 'updated_by_user' | 'created_at' | 'updated_at' | 'treezorTransfer'> {
     dateOfDemand: string,
     dateOfCompletion?: string,

@@ -1,6 +1,5 @@
 import { BaseModel } from '../base/base.model';
 import { TreezorUserModel } from './treezor-user.model';
-import { FireblocksUserModel } from './fireblocks-user.model';
 import { DbLinkModel } from '../common/common.model';
 import { AddressModel } from '../address/address.model';
 import { NationalityModel } from '../nationality/nationality.model';
@@ -16,7 +15,6 @@ export interface ExtendedClientInfoModel extends ClientInfoModel {
 
 export interface ClientInfoModel extends BaseModel, CommonClientInfoModel {
     treezorUser: TreezorUserModel,
-    fireblocksUser: FireblocksUserModel,
     addresses: AddressModel[],
     mainAddress: AddressModel,
     nationality: NationalityModel
@@ -25,7 +23,6 @@ export interface ClientInfoModel extends BaseModel, CommonClientInfoModel {
 export interface ClientInfoFormModel extends CommonClientInfoModel {
     user?: string,
     treezorUser?: DbLinkModel,
-    fireblocksUser?: DbLinkModel,
     addresses: DbLinkModel[],
     mainAddress: DbLinkModel,
     nationality: DbLinkModel,
