@@ -1,9 +1,0 @@
-export enum FireblocksApiOperationEnum {
-    TRANSFER = 'TRANSFER',
-    RAW = 'RAW',
-    CONTRACT_CALL = 'CONTRACT_CALL',
-    MINT = 'MINT',
-    BURN = 'BURN',
-    SUPPLY_TO_COMPOUND = 'SUPPLY_TO_COMPOUND',
-    REDEEM_FROM_COMPOUND = 'REDEEM_FROM_COMPOUND'
-}
