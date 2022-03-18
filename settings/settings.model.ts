@@ -8,6 +8,7 @@ export interface SettingsModel extends BaseModel {
     kycScoreThresholdHigh: number;
     depositMin: number;
     withdrawalMin: number;
+    transferMax: number;
 }
 
 export interface ExtendedSettingsModel extends SettingsModel {
