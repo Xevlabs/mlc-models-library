@@ -3,5 +3,6 @@ export enum TransactionStatusEnum {
     VALIDATED = 'VALIDATED',
     CANCELED = 'CANCELED',
     ERROR = 'ERROR',
-    FAILED = 'FAILED'
+    FAILED = 'FAILED',
+    PENDING = 'PENDING'
 }
