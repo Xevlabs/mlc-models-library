@@ -10,5 +10,6 @@ export interface StrapiBeneficiaryFormModel {
     DbtrIBAN: string,
     ibanBic: string,
     creditor: number,
-    treezorBeneficiaryId?: string
+    treezorBeneficiaryId?: string,
+    usableForSct: boolean
 }
