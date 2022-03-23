@@ -6,10 +6,10 @@ import { TreezorKycLivenessScoreEnum } from '../../enums/treezor-kyc/treezor-kyc
 export interface TreezorKycAbstractModel extends BaseModel, TreezorKycAbstractFormModel {}
 
 export interface TreezorKycAbstractFormModel {
-    livenessLink: string,
+    livenessLink?: string,
     level: TreezorKycLevelEnum,
     reviewStatus: TreezorKycReviewStatusEnum,
-    livenessScore: TreezorKycLivenessScoreEnum,
+    livenessScore?: TreezorKycLivenessScoreEnum,
     comment?: string,
     clientKyc: number
 }

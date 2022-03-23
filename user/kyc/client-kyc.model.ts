@@ -8,6 +8,7 @@ import { WorldCheckInfoModel } from '../../world-check-info/world-check-info.mod
 import { ClientModel } from '../client.model';
 import { KycDocumentModel } from './kyc-document.model';
 import { MlcKycDocumentLevelEnum } from '../../enums/mlc-kyc-document-level.enum';
+import { CompanyModel } from '../../company/company.model';
 
 export interface ClientKycModel extends BaseModel, Omit<StrapiClientKycCreationModel, 'treezorKycAbstract'>, Partial<ClientKycScoreRelatedFields> {
     treezorKycAbstract: TreezorKycAbstractModel,
@@ -16,13 +17,15 @@ export interface ClientKycModel extends BaseModel, Omit<StrapiClientKycCreationM
     worldCheckInfo?: WorldCheckInfoModel
 }
 
-export interface StrapiPopulatedClientKycModel extends Omit<ClientKycModel, 'user'> {
-    user: ClientModel
+export interface StrapiPopulatedClientKycModel extends Omit<ClientKycModel, 'user' | 'company'> {
+    user?: ClientModel,
+    company?: CompanyModel
 }
 
 export interface StrapiClientKycCreationModel {
     status: KycStatusEnum,
-    user: string,
+    user?: string,
+    company?: string,
     treezorKycAbstract?: number
 }
 

@@ -2,6 +2,7 @@ import { BeneficiaryModel } from '../beneficiary/beneficiary.model';
 import { TimestampModel } from '../common/common.model';
 import { ExtendedClientInfoModel } from './client-info.model';
 import { ClientKycModel } from './kyc/client-kyc.model';
+import { TreezorControllingPersonTypeEnum } from '@/typings/enums/treezor-controlling-person-type.enum';
 
 export interface ExtendedTreezorUserModel extends TreezorUserModel {
     clientInfo: ExtendedClientInfoModel;
@@ -17,5 +18,8 @@ export interface TreezorUserFormModel {
     treezorId: string,
     walletId: string,
     iban: string,
-    clientInfo: number
+    clientInfo: number,
+    parentUserId?: string | null,
+    controllingPersonType?: TreezorControllingPersonTypeEnum | null,
+    effectiveBeneficiary?: number | null
 }

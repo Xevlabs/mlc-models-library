@@ -1,6 +1,3 @@
-import { TitleEnum } from '../user/title.enum';
-import { IncomeRangeEnum } from '../enums/income-range.enum';
-import { TreezorApiUserStatusEnum } from '../enums/treezor-api-user-status.enum';
 import { TreezorApiWalletStatusEnum } from '../enums/treezor-api-wallet-status.enum';
 
 export interface TreezorAuthRequestModel {
@@ -13,50 +10,6 @@ export interface TreezorAuthResponseModel {
     token_type: string,
     expires_in: number,
     access_token: string,
-}
-
-export interface TreezorApiUserFormModel extends Omit<TreezorApiUserEditionFormModel, 'userTypeId'> {
-    userTypeId: 1,
-    userTag: string,
-    userStatus?: TreezorApiUserStatusEnum
-}
-
-export interface TreezorApiUserEditionFormModel {
-    specifiedUSPerson: 0 | 1,
-    title: TitleEnum,
-    firstname: string,
-    lastname: string,
-    birthday: string,
-    email: string,
-    address1: string,
-    address2?: string,
-    address3?: string,
-    postcode: string,
-    city: string,
-    state?: string,
-    country: string,
-    phone: string,
-    placeOfBirth: string,
-    birthCountry: string,
-    incomeRange: IncomeRangeEnum,
-    nationality: string,
-    legalSector: string,
-    userTypeId?: string,
-}
-
-export interface TreezorApiUserModel {
-    userId: string,
-    userTypeId: '1',
-    userStatus: TreezorApiUserStatusEnum,
-    specifiedUSPerson: boolean,
-    title: TitleEnum,
-    firstname: string,
-    lastname: string,
-    userTag: string,
-    kycLevel: string,
-    kycReview: string,
-    kycReviewComment: string,
-    walletCount: number
 }
 
 export interface TreezorApiKycReviewUserModel {
