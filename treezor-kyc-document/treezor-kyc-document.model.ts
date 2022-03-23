@@ -3,7 +3,7 @@ import {
     CompanyKycDocumentTypeEnum
 } from '../enums/treezor-kyc/treezor-kyc-document-type.enum';
 import { Files } from 'formidable';
-import { TreezorApiDocumentModel } from '@/typings/treezor-api/treezor-api-document.model';
+import { TreezorApiDocumentModel } from '../treezor-api/treezor-api-document.model';
 
 export interface TreezorKycDocumentModel extends StrapiTreezorKycDocumentFormModel, BaseModel {}
 

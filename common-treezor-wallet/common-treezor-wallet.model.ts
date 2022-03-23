@@ -1,36 +1,20 @@
 import { TreezorCommonWalletTypeEnum } from '../enums/common-wallets/treezor-common-wallet-type.enum';
+import { TreezorUserModel } from '../user/treezor-user.model';
+import { TreezorApiWalletModel } from '../treezor-api/treezor-api.model';
+import { DbLinkModel } from '../common/common.model';
 
-export interface CommonTreezorWalletModel {
+export interface CommonTreezorWalletModel extends Omit<StrapiCommonTreezorWalletFormModel, 'treezorUser' | 'walletId' | 'tariffId' | 'userId' | 'jointUserId' | 'contractSigned' | 'codeStatus'> {
     id: number,
     walletId: number,
-    walletTypeId: number,
-    walletStatus: string,
     codeStatus: number,
-    informationStatus: string,
-    walletTag: string,
     userId: number,
-    userLastname: string,
-    userFirstname: string,
     jointUserId: number,
     tariffId: number,
-    eventName: string,
-    eventAlias: string,
-    eventDate: string,
-    eventMessage: string,
-    eventPayinStartDate: string,
-    eventPayinEndDate: string,
     contractSigned: number,
-    bic: string,
-    iban: string,
-    urlImage: string,
-    currency: string,
-    createdDate: string,
-    modifiedDate: string,
-    payinCount: number,
-    payoutCount: number,
-    transferCount: number,
-    solde: number,
-    authorizedBalance: number,
-    totalRows: number,
-    walletType: TreezorCommonWalletTypeEnum
+    treezorUser: TreezorUserModel
+}
+
+export interface StrapiCommonTreezorWalletFormModel extends TreezorApiWalletModel {
+    walletType: TreezorCommonWalletTypeEnum,
+    treezorUser: DbLinkModel
 }

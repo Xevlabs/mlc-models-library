@@ -1,5 +1,5 @@
 import { TreezorKycDocumentTypeEnum } from '../enums/treezor-kyc/treezor-kyc-document-type.enum';
-import { TreezorKycDocumentStatusEnum } from '@/typings';
+import { TreezorKycDocumentStatusEnum } from '../enums/treezor-kyc/treezor-kyc-document-status.enum';
 
 export interface TreezorApiDocumentModel {
     documentId: string,

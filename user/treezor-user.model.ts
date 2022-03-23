@@ -2,7 +2,8 @@ import { BeneficiaryModel } from '../beneficiary/beneficiary.model';
 import { TimestampModel } from '../common/common.model';
 import { ExtendedClientInfoModel } from './client-info.model';
 import { ClientKycModel } from './kyc/client-kyc.model';
-import { TreezorControllingPersonTypeEnum } from '@/typings/enums/treezor-controlling-person-type.enum';
+import { TreezorControllingPersonTypeEnum } from '../enums/treezor-controlling-person-type.enum';
+import { CommonTreezorWalletModel } from '../common-treezor-wallet/common-treezor-wallet.model';
 
 export interface ExtendedTreezorUserModel extends TreezorUserModel {
     clientInfo: ExtendedClientInfoModel;
@@ -11,7 +12,8 @@ export interface ExtendedTreezorUserModel extends TreezorUserModel {
 }
 
 export interface TreezorUserModel extends Omit<TreezorUserFormModel, 'clientInfo'>, TimestampModel {
-    id: string;
+    id: string,
+    commonTreezorWallet?: CommonTreezorWalletModel
 }
 
 export interface TreezorUserFormModel {

@@ -9,8 +9,8 @@ import { BusinessSectorEnum } from '../enums/business-sector.enum';
 import { ClientAccountStatusEnum } from '../enums/client-account-status.enum';
 import { ClientModel } from './client.model';
 import { CompanyModel } from '../company/company.model';
-import { LanguageIsoEnum } from '@/typings/enums/language-iso.enum';
-import { TimeZoneEnum } from '@/typings/enums/time-zone.enum';
+import { LanguageIsoEnum } from '../enums/language-iso.enum';
+import { TimeZoneEnum } from '../enums/time-zone.enum';
 
 export interface ExtendedClientInfoModel extends ClientInfoModel {
     user?: ClientModel,

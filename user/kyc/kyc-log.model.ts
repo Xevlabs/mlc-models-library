@@ -5,7 +5,7 @@ import { KycStatusEnum } from '../../enums/kyc-status.enum';
 import { KycHistoryOperationTypeEnum } from '../../enums/kyc-history-operation-type.enum';
 import { PopulatedBaseModel } from '../../base/base.model';
 import { KycDocumentModel } from './kyc-document.model';
-import { CompanyModel } from '@/typings';
+import { CompanyModel } from '../../company/company.model';
 
 export interface KycLogModel extends PopulatedBaseModel, Omit<StrapiKycLogFormModel, 'client' | 'company' | 'created_by_user'> {
     id: number,
