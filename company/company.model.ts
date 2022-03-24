@@ -49,7 +49,6 @@ interface StrapiCompanyBase {
     legalNumberOfEmployeeRange: NumberOfEmployeeRangeEnum,
     entityType?: CompanyEntityTypeEnum,
     legalNetIncomeRange: LegalNetIncomeRangeEnum,
-    effectiveBeneficiary?: number,
     activityOutsideEu?: boolean,
     economicSanctions?: boolean,
     residentCountriesSanctions?: boolean,
