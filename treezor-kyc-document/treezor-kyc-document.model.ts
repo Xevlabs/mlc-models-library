@@ -1,28 +1,17 @@
 import { BaseModel } from '../base/base.model';
-import { TreezorKycDocumentStatusEnum } from '../enums/treezor-kyc/treezor-kyc-document-status.enum';
+import {
+    CompanyKycDocumentTypeEnum
+} from '../enums/treezor-kyc/treezor-kyc-document-type.enum';
+import { Files } from 'formidable';
+import { TreezorApiDocumentModel } from '../treezor-api/treezor-api-document.model';
 
-export interface TreezorKycDocumentModel extends StrapiExtendedTreezorKycDocumentModel, BaseModel {}
+export interface TreezorKycDocumentModel extends StrapiTreezorKycDocumentFormModel, BaseModel {}
 
-export interface StrapiExtendedTreezorKycDocumentModel extends StrapiTreezorKycDocumentModel {
+export interface StrapiTreezorKycDocumentFormModel extends Omit<TreezorKycDocumentUploadDataForm, 'document'>, Omit<TreezorApiDocumentModel, 'documentType'> {
     clientKyc?: number;
 }
 
-export interface StrapiTreezorKycDocumentModel {
-    documentId: string,
-    documentTag: string,
-    clientId: string,
-    userId: string,
-    userFirstname: string,
-    userLastname: string,
-    name: string,
-    documentStatus: string,
-    documentTypeId: string,
-    documentType: string,
-    fileName: string,
-    thumbFileName: string,
-    createdDate: string | null,
-    modifiedDate: string | null,
-    codeStatus: TreezorKycDocumentStatusEnum,
-    informationStatus: string,
-    residenceId: string
+export interface TreezorKycDocumentUploadDataForm {
+    documentType: CompanyKycDocumentTypeEnum,
+    document: Files
 }
