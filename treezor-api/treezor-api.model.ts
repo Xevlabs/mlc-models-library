@@ -28,7 +28,7 @@ export interface TreezorApiWalletFormModel {
     eventName: string
 }
 
-export interface TreezorApiWalletModel extends Omit<TreezorApiWalletFormModel, 'currency'> {
+export interface TreezorApiWalletModel extends Omit<TreezorApiWalletFormModel, 'currency'>, SimplifiedTreezorApiWalletModel {
     walletId: string,
     walletStatus: TreezorApiWalletStatusEnum,
     jointUserId: string,
@@ -42,18 +42,21 @@ export interface TreezorApiWalletModel extends Omit<TreezorApiWalletFormModel, '
     urlImage: string,
     createdDate: string,
     modifiedDate: string,
-    userFirstname: string,
-    userLastName: string,
     codeStatus: string,
     informationStatus: string,
     payinCount: number,
     payoutCount: number,
     transferCount: number,
-    bic: string,
-    iban: string,
-    solde: number,
     authorizedBalance: number,
     totalRows: number
+}
+
+export interface SimplifiedTreezorApiWalletModel {
+    userFirstname: string,
+    userLastname: string,
+    bic: string,
+    iban: string,
+    solde: number
 }
 
 export interface TreezorKycUrlResponseModel {
