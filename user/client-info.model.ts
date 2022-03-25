@@ -8,34 +8,41 @@ import { SocioProfessionalCategoryEnum } from '../enums/socio-professional-categ
 import { BusinessSectorEnum } from '../enums/business-sector.enum';
 import { ClientAccountStatusEnum } from '../enums/client-account-status.enum';
 import { ClientModel } from './client.model';
+import { CompanyModel } from '../company/company.model';
+import { LanguageIsoEnum } from '../enums/language-iso.enum';
+import { TimeZoneEnum } from '../enums/time-zone.enum';
 
 export interface ExtendedClientInfoModel extends ClientInfoModel {
-    user: ClientModel
+    user?: ClientModel,
+    company?: CompanyModel
 }
 
 export interface ClientInfoModel extends BaseModel, CommonClientInfoModel {
     treezorUser: TreezorUserModel,
     addresses: AddressModel[],
     mainAddress: AddressModel,
-    nationality: NationalityModel
+    nationality?: NationalityModel
 }
 
 export interface ClientInfoFormModel extends CommonClientInfoModel {
     user?: string,
+    company?: string,
     treezorUser?: DbLinkModel,
     addresses: DbLinkModel[],
     mainAddress: DbLinkModel,
-    nationality: DbLinkModel,
+    nationality?: DbLinkModel,
     updated_by_user?: DbLinkModel
 }
 
 interface CommonClientInfoModel {
     bonusInterestRate: number,
-    dateOfBirth: string,
+    dateOfBirth?: string,
     usCitizen: boolean,
-    incomeRange: IncomeRangeEnum,
-    socioProfessionalCategory: SocioProfessionalCategoryEnum,
-    businessSector: BusinessSectorEnum,
-    cityOfBirth: string,
-    accountStatus: ClientAccountStatusEnum
+    incomeRange?: IncomeRangeEnum,
+    socioProfessionalCategory?: SocioProfessionalCategoryEnum,
+    businessSector?: BusinessSectorEnum,
+    cityOfBirth?: string,
+    accountStatus: ClientAccountStatusEnum,
+    language?: LanguageIsoEnum,
+    timezone?: TimeZoneEnum
 }

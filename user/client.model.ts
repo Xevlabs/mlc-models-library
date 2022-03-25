@@ -8,17 +8,23 @@ import { DbLinkModel } from '../common/common.model';
 import { IncomeRangeEnum } from '../enums/income-range.enum';
 import { BaseProfileForm } from './profile.model';
 import { TitleEnum } from './title.enum';
+import { TreezorControllingPersonTypeEnum } from '../enums/treezor-controlling-person-type.enum';
+import { CompanyModel } from '../company/company.model';
 
 export interface ClientModel extends UserModel {
     clientInfo: ClientInfoModel,
-    clientKyc?: ClientKycModel
+    clientKyc?: ClientKycModel,
+    company?: CompanyModel
 }
 
 export interface ClientRegistrationFormModel extends Omit<ClientEditionFormModel, 'address'> {
     signedDocuments: DbLinkModel[],
     password: string,
     passwordConfirmation : string,
-    address : AddressFormModel
+    address : AddressFormModel,
+    companyUuid?: string,
+    controllingPersonType?: TreezorControllingPersonTypeEnum,
+    effectiveBeneficiary?: number
 }
 
 export interface StrapiExtendedClientEditionModel extends ClientEditionFormModel {
@@ -49,7 +55,8 @@ export interface StrapiClientProfileFormModel extends BaseProfileForm {
     username: string,
     blocked: boolean,
     confirmed: boolean,
-    updated_by_user?: DbLinkModel
+    updated_by_user?: DbLinkModel,
+    company?: DbLinkModel
 }
 
 export interface ClientRegistrationResponseBodyModel {

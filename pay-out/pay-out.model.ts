@@ -3,6 +3,7 @@ import { DbLinkModel } from '../common/common.model';
 import { PopulatedBaseModel } from '../base/base.model';
 import { BeneficiaryModel } from '../beneficiary/beneficiary.model';
 import { TreezorUserModel } from '../user/treezor-user.model';
+import { PayoutRefundStatusEnum } from '../enums/payout-refund-status.enum';
 
 export interface PayOutModel extends Omit<StrapiPayoutFormModel, 'treezorUser' | 'beneficiary' | 'created_by_user'>, PopulatedBaseModel {
     beneficiary?: BeneficiaryModel,
@@ -24,7 +25,8 @@ export interface StrapiPayoutFormModel extends Omit<TreezorApiPayoutModel, 'payo
     created_by_user?: DbLinkModel,
     payoutDate: string | null,
     createdDate: string | null,
-    modifiedDate: string | null
+    modifiedDate: string | null,
+    refundStatus: PayoutRefundStatusEnum
 }
 
 export interface PayoutFormModel {
