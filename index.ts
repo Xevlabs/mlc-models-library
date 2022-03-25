@@ -61,9 +61,10 @@ export * from './enums/transaction-type.enum';
 export * from './enums/transaction-status.enum';
 export * from './enums/transaction-error-code.enum';
 export * from './enums/transaction-error-level.enum';
-export * from './enums/inputType.enum'
-export * from './enums/treezor-transfer-direction.enum'
-export * from './enums/mlc-kyc-document-level.enum'
+export * from './enums/inputType.enum';
+export * from './enums/treezor-transfer-direction.enum';
+export * from './enums/mlc-kyc-document-level.enum';
+export * from './enums/payout-refund-status.enum';
 
 // CONSTANTS EXPORTS
 export * from './constants/admin-roles.constant';
