@@ -13,3 +13,5 @@ export interface StrapiBeneficiaryFormModel {
     treezorBeneficiaryId?: string,
     usableForSct: boolean
 }
+
+export interface ClientBeneficiaryModel extends Pick<BeneficiaryModel, 'id' | 'ibanFullname' | 'DbtrIBAN'> {}
