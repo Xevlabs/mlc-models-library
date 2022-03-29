@@ -3,7 +3,7 @@ export interface CSVFormat {
     date: string, 
     label?: string,
     from?: string, 
-    value: number, 
+    value: number | undefined, 
     payinId?: string, 
-    transferId?: string
+    transferId?: number
 }
