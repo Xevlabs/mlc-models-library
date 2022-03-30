@@ -45,7 +45,9 @@ export interface ClientEditionFormModel {
     usCitizen : boolean,
     incomeRange : IncomeRangeEnum,
     socioProfessionalCategory : SocioProfessionalCategoryEnum,
-    businessSector : BusinessSectorEnum
+    businessSector : BusinessSectorEnum,
+    taxResidenceCountry: DbLinkModel,
+    taxPayerId?: string
 }
 
 export interface StrapiClientProfileFormModel extends BaseProfileForm {

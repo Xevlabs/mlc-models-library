@@ -3,5 +3,6 @@ import { CountryIsoEnum } from '../enums/country-iso.enum';
 
 export interface CountryModel extends LocalizedModel {
     isoCode: CountryIsoEnum,
-    name: string
+    name: string,
+    requiredTaxId: boolean
 }
