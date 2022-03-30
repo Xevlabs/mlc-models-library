@@ -1,5 +1,5 @@
 import { TreezorApiPayoutModel } from '../treezor-api/treezor-api-payout.model';
-import { DbLinkModel, FileModel } from '../common/common.model';
+import { DbLinkModel } from '../common/common.model';
 import { PopulatedBaseModel } from '../base/base.model';
 import { BeneficiaryModel, ClientBeneficiaryModel } from '../beneficiary/beneficiary.model';
 import { TreezorUserModel } from '../user/treezor-user.model';
@@ -27,7 +27,7 @@ export interface StrapiPayoutFormModel extends Omit<TreezorApiPayoutModel, 'payo
     createdDate: string | null,
     modifiedDate: string | null,
     refundStatus: PayoutRefundStatusEnum,
-    justificationDocument: FileModel
+    supportingFileLink: string | null
 }
 
 export interface PayoutFormModel {
