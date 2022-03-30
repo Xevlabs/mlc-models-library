@@ -1,4 +1,4 @@
-import { CountryIsoEnum } from '@/typings/enums/country-iso.enum';
+import { CountryIsoEnum } from '../enums/country-iso.enum';
 
 export interface TreezorApiTaxResidenceModel extends Omit<TreezorApiTaxResidenceFormModel, 'taxPayerId'> {
     id: number,
