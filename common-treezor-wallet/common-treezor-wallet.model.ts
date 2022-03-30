@@ -16,5 +16,5 @@ export interface CommonTreezorWalletModel extends Omit<StrapiCommonTreezorWallet
 
 export interface StrapiCommonTreezorWalletFormModel extends TreezorApiWalletModel {
     walletType: TreezorCommonWalletTypeEnum,
-    treezorUser: DbLinkModel
+    treezorUser: number
 }
