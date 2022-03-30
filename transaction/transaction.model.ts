@@ -1,4 +1,4 @@
-import { DbLinkModel } from '../common/common.model';
+import { DbLinkModel, TimestampModel } from '../common/common.model';
 import { TransactionTypeEnum } from '../enums/transaction-type.enum';
 import { BaseModel, PopulatedBaseModel } from '../base/base.model';
 import { TransactionStatusEnum } from '../enums/transaction-status.enum';
@@ -21,10 +21,7 @@ interface BaseTransactionModel extends Omit<StrapiTransactionFormModel, 'created
     transactionHistories?: TransactionHistoryModel[]
 }
 
-export interface StrapiTransactionFormModel extends TransactionFormModel{
-    type: TransactionTypeEnum,
-    status: TransactionStatusEnum,
-    currency: 'EUR',
+export interface StrapiTransactionFormModel extends TransactionFormModel, StrapiTransactionCommonModel{
     user: DbLinkModel,
     created_by_user?: DbLinkModel
 }
@@ -53,4 +50,14 @@ export interface TransactionDetailsModel extends Omit<TransactionModel, 'updated
     movements: {
         treezorCommonWallet?: Partial<TreezorTransferModel>
     }
+}
+
+export interface ClientTransactionModel extends StrapiTransactionCommonModel, TimestampModel  {
+    id: number
+}
+
+interface StrapiTransactionCommonModel extends TransactionFormModel {
+    type: TransactionTypeEnum,
+    status: TransactionStatusEnum,
+    currency: 'EUR'
 }

@@ -1,7 +1,7 @@
 import { TreezorApiPayoutModel } from '../treezor-api/treezor-api-payout.model';
 import { DbLinkModel, FileModel } from '../common/common.model';
 import { PopulatedBaseModel } from '../base/base.model';
-import { BeneficiaryModel } from '../beneficiary/beneficiary.model';
+import { BeneficiaryModel, ClientBeneficiaryModel } from '../beneficiary/beneficiary.model';
 import { TreezorUserModel } from '../user/treezor-user.model';
 import { PayoutRefundStatusEnum } from '../enums/payout-refund-status.enum';
 
@@ -33,4 +33,8 @@ export interface StrapiPayoutFormModel extends Omit<TreezorApiPayoutModel, 'payo
 export interface PayoutFormModel {
     amount: number,
     beneficiaryId: number
+}
+
+export interface ClientPayoutModel extends Pick<PayOutModel, 'id' | 'amount' | 'created_at' | 'payoutStatus' | 'label'> {
+    beneficiary?: ClientBeneficiaryModel
 }
