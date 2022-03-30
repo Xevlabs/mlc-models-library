@@ -1,7 +1,6 @@
 import { TreezorCommonWalletTypeEnum } from '../enums/common-wallets/treezor-common-wallet-type.enum';
 import { TreezorUserModel } from '../user/treezor-user.model';
 import { TreezorApiWalletModel } from '../treezor-api/treezor-api.model';
-import { DbLinkModel } from '../common/common.model';
 
 export interface CommonTreezorWalletModel extends Omit<StrapiCommonTreezorWalletFormModel, 'treezorUser' | 'walletId' | 'tariffId' | 'userId' | 'jointUserId' | 'contractSigned' | 'codeStatus'> {
     id: number,
@@ -16,5 +15,5 @@ export interface CommonTreezorWalletModel extends Omit<StrapiCommonTreezorWallet
 
 export interface StrapiCommonTreezorWalletFormModel extends TreezorApiWalletModel {
     walletType: TreezorCommonWalletTypeEnum,
-    treezorUser: DbLinkModel
+    treezorUser: number
 }
