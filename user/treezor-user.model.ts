@@ -9,13 +9,13 @@ import { CountryModel } from '../country/country.model';
 export interface ExtendedTreezorUserModel extends TreezorUserModel {
     clientInfo: ExtendedClientInfoModel;
     clientKyc: ClientKycModel;
-    beneficiaries: BeneficiaryModel[];
 }
 
 export interface TreezorUserModel extends Omit<TreezorUserFormModel, 'clientInfo' | 'taxResidenceCountry'>, TimestampModel {
     id: string,
     commonTreezorWallet?: CommonTreezorWalletModel,
-    taxResidenceCountry?: CountryModel
+    taxResidenceCountry?: CountryModel,
+    beneficiaries: BeneficiaryModel[]
 }
 
 export interface TreezorUserFormModel {
