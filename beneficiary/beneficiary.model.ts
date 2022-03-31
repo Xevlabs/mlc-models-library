@@ -9,11 +9,11 @@ export interface StrapiBeneficiaryFormModel extends StrapiCommonBeneficiaryField
     treezorBeneficiaryId?: string
 }
 
-export interface ClientBeneficiaryModel extends StrapiCommonBeneficiaryFields {
+export interface ClientBeneficiaryModel extends StrapiCommonBeneficiaryFields, TimestampModel {
     id: number
 }
 
-interface StrapiCommonBeneficiaryFields extends TimestampModel {
+interface StrapiCommonBeneficiaryFields {
     ibanFullname: string,
     DbtrIBAN: string,
     usableForSct: boolean,
