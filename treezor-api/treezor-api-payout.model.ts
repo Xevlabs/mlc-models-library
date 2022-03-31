@@ -25,7 +25,7 @@ export interface TreezorApiPayoutModel {
     bankaccountIBAN: string,
     codeStatus: string,
     informationStatus: string,
-    supportFileLink: string
+    supportingFileLink: string
 }
 
 export interface TreezorApiPayoutFormModel {
@@ -34,5 +34,6 @@ export interface TreezorApiPayoutFormModel {
     amount: number,
     currency: 'EUR',
     label: string,
-    payoutTag: string
+    payoutTag: string,
+    supportingFileLink: string
 }
