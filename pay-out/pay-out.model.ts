@@ -26,7 +26,7 @@ export interface StrapiPayoutFormModel extends Omit<TreezorApiPayoutModel, 'payo
     payoutDate: string | null,
     createdDate: string | null,
     modifiedDate: string | null,
-    refundStatus: PayoutRefundStatusEnum
+    refundStatus: PayoutRefundStatusEnum,
 }
 
 export interface PayoutFormModel {
