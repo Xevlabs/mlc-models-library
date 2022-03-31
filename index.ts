@@ -35,6 +35,7 @@ export * from './kyc-transaction-category/kyc-transaction-category.model';
 export * from './kyc-transaction-category-condition/kyc-transaction-category-condition.model';
 export * from './user/kyc/kyc-document.model';
 export * from './mlc-doc-threshold/mlc-doc-threshold.model';
+export * from './country/country.model';
 export * from './treezor-api/treezor-api-user.model';
 export * from './company/company.model';
 export * from './company-kyc-document-type/company-kyc-document-type.model';
