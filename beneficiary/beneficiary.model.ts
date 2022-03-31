@@ -1,21 +1,21 @@
 import { TimestampModel, TreezorUserModel } from '..';
 
-export interface BeneficiaryModel extends Omit<StrapiBeneficiaryFormModel, 'creditor'>, TimestampModel, ClientBeneficiaryModel {
+export interface BeneficiaryModel extends Omit<StrapiBeneficiaryFormModel, 'creditor'>, ClientBeneficiaryModel {
     creditor: TreezorUserModel
 }
 
 export interface StrapiBeneficiaryFormModel extends StrapiCommonBeneficiaryFields {
-    ibanBic: string,
     creditor: number,
-    treezorBeneficiaryId?: string,
-    usableForSct: boolean
+    treezorBeneficiaryId?: string
 }
 
 export interface ClientBeneficiaryModel extends StrapiCommonBeneficiaryFields {
     id: number
 }
 
-interface StrapiCommonBeneficiaryFields {
+interface StrapiCommonBeneficiaryFields extends TimestampModel {
     ibanFullname: string,
-    DbtrIBAN: string
+    DbtrIBAN: string,
+    usableForSct: boolean,
+    ibanBic: string
 }
