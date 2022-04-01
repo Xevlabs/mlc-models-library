@@ -67,6 +67,7 @@ export * from './enums/treezor-transfer-direction.enum';
 export * from './enums/mlc-kyc-document-level.enum';
 export * from './enums/payout-refund-status.enum';
 export * from './enums/patrimony.enum';
+export * from './enums/kyc-document-status.enum';
 
 // CONSTANTS EXPORTS
 export * from './constants/admin-roles.constant';
