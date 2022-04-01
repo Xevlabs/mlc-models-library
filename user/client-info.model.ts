@@ -11,6 +11,7 @@ import { ClientModel } from './client.model';
 import { CompanyModel } from '../company/company.model';
 import { LanguageIsoEnum } from '../enums/language-iso.enum';
 import { TimeZoneEnum } from '../enums/time-zone.enum';
+import { PatrimonyEnum } from '../enums/patrimony.enum';
 
 export interface ExtendedClientInfoModel extends ClientInfoModel {
     user?: ClientModel,
@@ -41,6 +42,7 @@ interface CommonClientInfoModel {
     incomeRange?: IncomeRangeEnum,
     socioProfessionalCategory?: SocioProfessionalCategoryEnum,
     businessSector?: BusinessSectorEnum,
+    patrimony?: PatrimonyEnum,
     cityOfBirth?: string,
     accountStatus: ClientAccountStatusEnum,
     language?: LanguageIsoEnum,
