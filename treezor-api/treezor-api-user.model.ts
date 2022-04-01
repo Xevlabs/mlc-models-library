@@ -28,7 +28,7 @@ export interface TreezorApiCompanyFormModel {
     legalShareCapital: string,
     legalAnnualTurnOver: AnnualTurnoverEnum,
     legalNumberOfEmployeeRange: NumberOfEmployeeRangeEnum,
-    legalSector: BusinessSectorEnum,
+    legalSector: BusinessSectorEnum | '',
     entityType?: 1 | 2 | 3 | 4 | 5,
     postcode: string,
     city: string,
@@ -73,7 +73,7 @@ export interface TreezorApiUserEditionFormModel {
     birthCountry: CountryIsoEnum,
     incomeRange: IncomeRangeEnum,
     nationality: CountryIsoEnum,
-    legalSector: BusinessSectorEnum,
+    legalSector: BusinessSectorEnum | '',
     userTypeId?: 1
 }
 
