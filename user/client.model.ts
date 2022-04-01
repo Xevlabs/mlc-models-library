@@ -10,6 +10,7 @@ import { BaseProfileForm } from './profile.model';
 import { TitleEnum } from './title.enum';
 import { TreezorControllingPersonTypeEnum } from '../enums/treezor-controlling-person-type.enum';
 import { CompanyModel } from '../company/company.model';
+import { PatrimonyEnum } from '../enums/patrimony.enum';
 
 export interface ClientModel extends UserModel {
     clientInfo: ClientInfoModel,
@@ -45,7 +46,8 @@ export interface ClientEditionFormModel {
     usCitizen : boolean,
     incomeRange : IncomeRangeEnum,
     socioProfessionalCategory : SocioProfessionalCategoryEnum,
-    businessSector : BusinessSectorEnum,
+    patrimony?: PatrimonyEnum,
+    businessSector? : BusinessSectorEnum,
     taxResidenceCountry: DbLinkModel,
     taxPayerId?: string
 }
