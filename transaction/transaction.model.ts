@@ -54,7 +54,7 @@ export interface TransactionDetailsModel extends Omit<TransactionModel, 'updated
 
 export interface ClientTransactionModel extends StrapiTransactionCommonModel, TimestampModel  {
     id: number,
-    transactionError?: ClientTransactionErrorModel[]
+    transactionErrors?: ClientTransactionErrorModel[]
 }
 
 interface StrapiTransactionCommonModel extends TransactionFormModel {
