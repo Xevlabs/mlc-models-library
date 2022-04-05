@@ -3,7 +3,7 @@ import { TransactionTypeEnum } from '../enums/transaction-type.enum';
 import { BaseModel, PopulatedBaseModel } from '../base/base.model';
 import { TransactionStatusEnum } from '../enums/transaction-status.enum';
 import { TreezorTransferModel } from '../treezor-transfer/treezor-transfer.model';
-import { TransactionErrorModel } from '../transaction-error/transaction-error.model';
+import { ClientTransactionErrorModel, TransactionErrorModel } from '../transaction-error/transaction-error.model';
 import { ClientModel } from '../user/client.model';
 import { TransactionHistoryModel } from '../transaction-history/transaction-history.model';
 
@@ -53,7 +53,8 @@ export interface TransactionDetailsModel extends Omit<TransactionModel, 'updated
 }
 
 export interface ClientTransactionModel extends StrapiTransactionCommonModel, TimestampModel  {
-    id: number
+    id: number,
+    transactionErrors?: ClientTransactionErrorModel[]
 }
 
 interface StrapiTransactionCommonModel extends TransactionFormModel {
