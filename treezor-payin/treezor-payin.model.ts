@@ -1,7 +1,9 @@
+import { TreezorApiPayinStatusEnum } from '../enums/treezor-api-payin-status.enum';
+
 export interface TreezorPayinModel {
     payinId: string
     payinTag: string,
-    payinStatus: string, 
+    payinStatus: TreezorApiPayinStatusEnum,
     paymentMethodId: number,
     messageToUser: string,
     subtotalItems: string,
