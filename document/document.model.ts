@@ -10,6 +10,7 @@ interface BaseDocumentFormModel {
     content: string,
     type: string,
     version: string,
+    position: number,
     published_at?: string | null
 }
 
