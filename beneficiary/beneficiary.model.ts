@@ -13,9 +13,12 @@ export interface ClientBeneficiaryModel extends StrapiCommonBeneficiaryFields, T
     id: number
 }
 
-interface StrapiCommonBeneficiaryFields {
+export interface BeneficiaryFormModel {
     ibanFullname: string,
     DbtrIBAN: string,
-    usableForSct: boolean,
     ibanBic: string
+}
+
+interface StrapiCommonBeneficiaryFields extends BeneficiaryFormModel {
+    usableForSct: boolean,
 }
