@@ -10,6 +10,6 @@ export interface TreezorKycAbstractFormModel {
     level: TreezorKycLevelEnum,
     reviewStatus: TreezorKycReviewStatusEnum,
     livenessScore?: TreezorKycLivenessScoreEnum,
-    comment?: string,
+    comment?: string | null,
     clientKyc: number
 }
