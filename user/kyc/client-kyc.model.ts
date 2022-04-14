@@ -14,8 +14,7 @@ export interface ClientKycModel extends BaseModel, Omit<StrapiClientKycCreationM
     treezorKycAbstract: TreezorKycAbstractModel,
     treezorDocuments: TreezorKycDocumentModel[],
     kycDocuments: KycDocumentModel[]
-    worldCheckInfo?: WorldCheckInfoModel,
-    onboardingDone: boolean
+    worldCheckInfo?: WorldCheckInfoModel
 }
 
 export interface StrapiPopulatedClientKycModel extends Omit<ClientKycModel, 'user' | 'company'> {
