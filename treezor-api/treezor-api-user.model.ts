@@ -51,7 +51,8 @@ export interface TreezorApiUserFormModel extends Omit<TreezorApiUserEditionFormM
     userStatus?: TreezorApiUserStatusEnum,
     parentUserId?: string,
     controllingPersonType?: 0 | 1 | 2 | 3,
-    effectiveBeneficiary?: number
+    effectiveBeneficiary?: number,
+    parentType?: TreezorApiParentTypeEnum
 }
 
 export interface TreezorApiUserEditionFormModel {
