@@ -27,7 +27,7 @@ export interface ClientRegistrationFormModel extends Omit<ClientEditionFormModel
     companyUuid?: string,
     controllingPersonType?: TreezorControllingPersonTypeEnum,
     effectiveBeneficiary?: number
-    treezorUser?: TreezorUserModel
+    treezorUser?: Partial<TreezorUserModel>
 }
 
 export interface StrapiExtendedClientEditionModel extends ClientEditionFormModel {
