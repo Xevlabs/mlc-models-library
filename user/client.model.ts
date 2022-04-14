@@ -11,6 +11,7 @@ import { TitleEnum } from './title.enum';
 import { TreezorControllingPersonTypeEnum } from '../enums/treezor-controlling-person-type.enum';
 import { CompanyModel } from '../company/company.model';
 import { PatrimonyEnum } from '../enums/patrimony.enum';
+import { TreezorUserModel } from './treezor-user.model';
 
 export interface ClientModel extends UserModel {
     clientInfo: ClientInfoModel,
@@ -26,6 +27,7 @@ export interface ClientRegistrationFormModel extends Omit<ClientEditionFormModel
     companyUuid?: string,
     controllingPersonType?: TreezorControllingPersonTypeEnum,
     effectiveBeneficiary?: number
+    treezorUser?: TreezorUserModel
 }
 
 export interface StrapiExtendedClientEditionModel extends ClientEditionFormModel {
