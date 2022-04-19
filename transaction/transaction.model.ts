@@ -35,12 +35,6 @@ export interface StrapiTransactionAndErrorsModel {
     newErrors: TransactionErrorModel[]
 }
 
-export interface SimplifiedTransactionModel {
-    linkedTransactionId: number,
-    value: number,
-    hasErrors: boolean
-}
-
 export interface TransactionDetailsModel extends Omit<TransactionModel, 'updated_by_user' | 'created_at' | 'updated_at' | 'treezorTransfer'> {
     dateOfDemand: string,
     dateOfCompletion?: string,
