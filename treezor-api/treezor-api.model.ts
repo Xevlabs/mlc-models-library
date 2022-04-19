@@ -47,7 +47,6 @@ export interface TreezorApiWalletModel extends Omit<TreezorApiWalletFormModel, '
     payinCount: number,
     payoutCount: number,
     transferCount: number,
-    authorizedBalance: number,
     totalRows: number
 }
 
@@ -56,7 +55,8 @@ export interface SimplifiedTreezorApiWalletModel {
     userLastname: string,
     bic: string,
     iban: string,
-    solde: number
+    solde: number,
+    authorizedBalance: number
 }
 
 export interface TreezorKycUrlResponseModel {
