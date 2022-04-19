@@ -46,5 +46,6 @@ interface CommonClientInfoModel {
     cityOfBirth?: string,
     accountStatus: ClientAccountStatusEnum,
     language?: LanguageIsoEnum,
-    timezone?: TimeZoneEnum
+    timezone?: TimeZoneEnum,
+    onboardingDone: boolean
 }

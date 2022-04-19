@@ -40,6 +40,7 @@ export * from './treezor-api/treezor-api-user.model';
 export * from './company/company.model';
 export * from './company-kyc-document-type/company-kyc-document-type.model';
 export * from './onboarding/onboarding.model'
+export * from './investment-report/investment-report.model';
 
 // ENUM EXPORTS
 export * from './roles/roles.enum';

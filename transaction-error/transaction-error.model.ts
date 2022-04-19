@@ -8,6 +8,10 @@ export interface TransactionErrorModel extends BaseModel, Omit<StrapiTransaction
     resolvedBy: ClientModel
 }
 
+export interface ClientTransactionErrorModel {
+    code: TransactionErrorCodeEnum
+}
+
 export interface StrapiTransactionErrorFormModel {
     transaction: number,
     code: TransactionErrorCodeEnum,
