@@ -47,5 +47,7 @@ interface CommonClientInfoModel {
     accountStatus: ClientAccountStatusEnum,
     language?: LanguageIsoEnum,
     timezone?: TimeZoneEnum,
-    onboardingDone: boolean
+    onboardingDone: boolean,
+    position?: string,
+    occupation?: string
 }
