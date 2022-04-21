@@ -10,7 +10,7 @@ import { NumberOfEmployeeRangeEnum } from '../enums/number-of-employee-range.enu
 import { LanguageIsoEnum } from '../enums/language-iso.enum';
 import { TimeZoneEnum } from '../enums/time-zone.enum';
 import { LegalNetIncomeRangeEnum } from '../enums/legal-net-income-range.enum';
-import { PatrimonyEnum } from '@/typings';
+import { PatrimonyEnum } from '../enums/patrimony.enum';
 
 export interface TreezorApiCompanyFormModel {
     userTypeId: 2 | 3 | 4,
