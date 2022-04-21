@@ -7,10 +7,10 @@ import { CountryIsoEnum } from '../enums/country-iso.enum';
 import { BusinessSectorEnum } from '../enums/business-sector.enum';
 import { AnnualTurnoverEnum } from '../enums/annual-turnover.enum';
 import { NumberOfEmployeeRangeEnum } from '../enums/number-of-employee-range.enum';
-import { PersonalAssetsRangeEnum } from '../enums/personal-assets-range.enum';
 import { LanguageIsoEnum } from '../enums/language-iso.enum';
 import { TimeZoneEnum } from '../enums/time-zone.enum';
 import { LegalNetIncomeRangeEnum } from '../enums/legal-net-income-range.enum';
+import { PatrimonyEnum } from '../enums/patrimony.enum';
 
 export interface TreezorApiCompanyFormModel {
     userTypeId: 2 | 3 | 4,
@@ -42,7 +42,10 @@ export interface TreezorApiCompanyFormModel {
     economicSanctions?: 0 | 1,
     residentCountriesSanctions?: 0 | 1,
     involvedSanctions?: 0 | 1,
-    timezone?: TimeZoneEnum
+    timezone?: TimeZoneEnum,
+    position?: string,
+    occupation?: string,
+    personalAssets?: PatrimonyEnum
 }
 
 export interface TreezorApiUserFormModel extends Omit<TreezorApiUserEditionFormModel, 'userTypeId'> {
@@ -75,7 +78,10 @@ export interface TreezorApiUserEditionFormModel {
     incomeRange: IncomeRangeEnum,
     nationality: CountryIsoEnum,
     legalSector: BusinessSectorEnum | '',
-    userTypeId?: 1
+    userTypeId?: 1,
+    position?: string,
+    occupation?: string,
+    personalAssets?: PatrimonyEnum
 }
 
 export interface TreezorApiUserModel {
@@ -120,7 +126,7 @@ export interface TreezorApiUserModel {
     legalNumberOfEmployeeRange: NumberOfEmployeeRangeEnum | '',
     effectiveBeneficiary: number,
     position: string,
-    personalAssets: PersonalAssetsRangeEnum | '',
+    personalAssets: PatrimonyEnum | '',
     taxResidence: CountryIsoEnum | '',
     taxNumber: string,
     kycLevel: number,
