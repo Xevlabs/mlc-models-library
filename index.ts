@@ -41,6 +41,7 @@ export * from './company/company.model';
 export * from './company-kyc-document-type/company-kyc-document-type.model';
 export * from './onboarding/onboarding.model'
 export * from './investment-report/investment-report.model';
+export * from './client-app-config/client-app-config.model';
 
 // ENUM EXPORTS
 export * from './roles/roles.enum';
@@ -74,4 +75,3 @@ export * from './enums/treezor-kyc/treezor-kyc-document-type.enum';
 
 // CONSTANTS EXPORTS
 export * from './constants/admin-roles.constant';
-export * from './client-app-config/client-app-config.model';
