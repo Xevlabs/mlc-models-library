@@ -74,3 +74,4 @@ export * from './enums/treezor-kyc/treezor-kyc-document-type.enum';
 
 // CONSTANTS EXPORTS
 export * from './constants/admin-roles.constant';
+export * from './client-app-config/client-app-config.model';
