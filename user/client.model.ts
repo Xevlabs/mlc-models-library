@@ -11,7 +11,6 @@ import { TitleEnum } from './title.enum';
 import { TreezorControllingPersonTypeEnum } from '../enums/treezor-controlling-person-type.enum';
 import { CompanyModel } from '../company/company.model';
 import { PatrimonyEnum } from '../enums/patrimony.enum';
-import { TreezorUserModel } from './treezor-user.model';
 
 export interface ClientModel extends UserModel {
     clientInfo: ClientInfoModel,
