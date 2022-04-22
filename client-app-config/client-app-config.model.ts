@@ -1,5 +1,5 @@
 import { TimestampModel } from '../common/common.model';
-import { BaseLocalizedModel } from '@/typings/localization/localization.model';
+import { BaseLocalizedModel } from '../localization/localization.model';
 
 export interface ClientAppConfigModel extends BaseLocalizedModel, TimestampModel, ClientAppConfigFormModel {
     id: number
