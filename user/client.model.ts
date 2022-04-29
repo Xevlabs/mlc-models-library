@@ -32,21 +32,24 @@ export interface StrapiExtendedClientEditionModel extends ClientEditionFormModel
     username: string;
 }
 
-export interface ClientEditionFormModel {
+export interface ClientLimitedEditionFormModel {
+    phone: string,
+    email: string,
+    incomeRange : IncomeRangeEnum,
+    socioProfessionalCategory : SocioProfessionalCategoryEnum,
+    patrimony: PatrimonyEnum
+}
+
+export interface ClientEditionFormModel extends ClientLimitedEditionFormModel {
     firstName: string,
     lastName: string,
     title : TitleEnum,
-    phone: string,
-    email: string,
     address : DbLinkModel,
     dateOfBirth : string,
     placeOfBirth : DbLinkModel,
     cityOfBirth : string,
     nationality : DbLinkModel,
     usCitizen : boolean,
-    incomeRange : IncomeRangeEnum,
-    socioProfessionalCategory : SocioProfessionalCategoryEnum,
-    patrimony: PatrimonyEnum,
     businessSector? : BusinessSectorEnum,
     taxResidenceCountry: DbLinkModel,
     taxPayerId?: string,
