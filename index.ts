@@ -42,6 +42,7 @@ export * from './company-kyc-document-type/company-kyc-document-type.model';
 export * from './onboarding/onboarding.model'
 export * from './investment-report/investment-report.model';
 export * from './client-app-config/client-app-config.model';
+export * from './route/route.model';
 
 // ENUM EXPORTS
 export * from './roles/roles.enum';
