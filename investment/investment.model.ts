@@ -10,3 +10,8 @@ export interface InvestmentModel {
 export interface ClientInvestmentModel extends InvestmentModel {
     treezorAdjustedWallet: ClientAdjustedTreezorWalletModel
 }
+
+export interface TotalInvestmentModel {
+    totalMoneyInvested: number,
+    totalPromisedEarnings: number
+}
