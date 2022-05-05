@@ -19,6 +19,11 @@ export interface BeneficiaryFormModel {
     ibanBic: string
 }
 
-interface StrapiCommonBeneficiaryFields extends BeneficiaryFormModel {
+interface StrapiCommonBeneficiaryFields extends BeneficiaryFormModel, BeneficiaryBlockedForm {
     usableForSct: boolean,
+    suspicious: boolean
+}
+
+export interface BeneficiaryBlockedForm {
+    blocked: boolean
 }

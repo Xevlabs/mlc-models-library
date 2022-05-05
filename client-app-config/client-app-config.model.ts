@@ -6,5 +6,11 @@ export interface ClientAppConfigModel extends BaseLocalizedModel, TimestampModel
 }
 
 export interface ClientAppConfigFormModel {
-    onboardingVideoLink: string
+    onboardingVideoLink: string,
+    simulatedInvestments: SimulatedInvestmentModel[]
+}
+
+export interface SimulatedInvestmentModel {
+    name: string,
+    annualEarningRate: number
 }
