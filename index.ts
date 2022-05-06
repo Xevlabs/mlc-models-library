@@ -43,6 +43,7 @@ export * from './onboarding/onboarding.model'
 export * from './investment-report/investment-report.model';
 export * from './client-app-config/client-app-config.model';
 export * from './route/route.model';
+export * from './total-investment-log/total-investment-log.model';
 
 // ENUM EXPORTS
 export * from './roles/roles.enum';
