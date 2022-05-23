@@ -44,6 +44,8 @@ export * from './investment-report/investment-report.model';
 export * from './client-app-config/client-app-config.model';
 export * from './route/route.model';
 export * from './total-investment-log/total-investment-log.model';
+export * from './hubspot-settings/hubspot-settings.model';
+export * from './hubspot-user/hubspot-user.model';
 
 // ENUM EXPORTS
 export * from './roles/roles.enum';
@@ -74,6 +76,7 @@ export * from './enums/payout-refund-status.enum';
 export * from './enums/patrimony.enum';
 export * from './enums/kyc-document-status.enum';
 export * from './enums/treezor-kyc/treezor-kyc-document-type.enum';
+export * from './enums/gender.enum';
 
 // CONSTANTS EXPORTS
 export * from './constants/admin-roles.constant';
