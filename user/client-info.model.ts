@@ -22,7 +22,8 @@ export interface ClientInfoModel extends BaseModel, CommonClientInfoModel {
     treezorUser: TreezorUserModel,
     addresses: AddressModel[],
     mainAddress: AddressModel,
-    nationality?: NationalityModel
+    nationality?: NationalityModel,
+    hubspotUser?: number
 }
 
 export interface ClientInfoFormModel extends CommonClientInfoModel {
