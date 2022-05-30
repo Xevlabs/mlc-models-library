@@ -7,7 +7,7 @@ import { IncomeRangeEnum } from '../enums/income-range.enum';
 import { KycStatusEnum } from '../enums/kyc-status.enum';
 
 export interface HubspotUserModel extends BaseModel, Omit<StrapiHubspotUserForm, 'clientInfo'> {
-    clientInfo: ClientInfoModel
+    clientInfo?: ClientInfoModel
 }
 
 export interface StrapiHubspotUserForm extends Omit<HubspotUserCreationForm, 'title'> {
