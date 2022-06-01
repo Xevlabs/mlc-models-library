@@ -4,5 +4,6 @@ export interface HubspotSettingsModel {
     registrationUserCreatedStageLabel: string,
     registrationWaitingValidPayinStageLabel: string,
     registrationWaitingTreezorReviewStageLabel: string,
-    registrationWaitingBaseScoreStageLabel: string
+    registrationWaitingBaseScoreStageLabel: string,
+    registrationValidationFinishedStageLabel: string
 }
