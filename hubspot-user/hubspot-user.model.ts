@@ -6,6 +6,7 @@ import { SocioProfessionalCategoryEnum } from '../enums/socio-professional-categ
 import { IncomeRangeEnum } from '../enums/income-range.enum';
 import { KycStatusEnum } from '../enums/kyc-status.enum';
 import { MlcKycDocumentLevelEnum } from '../enums/mlc-kyc-document-level.enum';
+import { TransactionStatusEnum } from '../enums/transaction-status.enum';
 
 export interface HubspotUserModel extends BaseModel, Omit<StrapiHubspotUserForm, 'clientInfo'> {
     clientInfo?: ClientInfoModel
@@ -32,7 +33,10 @@ export interface StrapiHubspotUserForm extends Omit<HubspotUserCreationForm, 'ti
     totalTreezorWallet?: number,
     kycBasescore?: number,
     kycCurrentscore?: number,
-    kycDocumentLevel?: MlcKycDocumentLevelEnum
+    kycDocumentLevel?: MlcKycDocumentLevelEnum,
+    lastTransactionStatus?: TransactionStatusEnum,
+    lastTransactionDate?: string,
+    lastTransactionAmount?: number
 }
 
 export interface HubspotUserCreationForm {
