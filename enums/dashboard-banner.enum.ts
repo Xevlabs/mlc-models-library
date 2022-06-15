@@ -1,0 +1,7 @@
+export enum DashboardBannerEnum {
+    MAKE_PAYIN_BANNER,
+    MAKE_DEPOSIT_BANNER,
+    WAITING_DOCS_BANNER,
+    WAITING_VALIDATION_BANNER,
+    NO_BANNER
+}
