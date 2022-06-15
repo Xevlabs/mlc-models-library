@@ -31,6 +31,8 @@ export interface StrapiHubspotUserForm extends Omit<HubspotUserCreationForm, 'ti
     kycStatus?: KycStatusEnum,
     dailyInterestRate?: number,
     totalTreezorWallet?: number,
+    adjustedTreezorWallet?: number,
+    authorizedTreezorWallet?: number,
     kycBasescore?: number,
     kycCurrentscore?: number,
     kycDocumentLevel?: MlcKycDocumentLevelEnum,
