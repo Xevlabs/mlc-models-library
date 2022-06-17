@@ -77,7 +77,8 @@ export * from './enums/patrimony.enum';
 export * from './enums/kyc-document-status.enum';
 export * from './enums/treezor-kyc/treezor-kyc-document-type.enum';
 export * from './enums/gender.enum';
-export * from './enums/dashboard-banner.enum'
+export * from './enums/dashboard-banner.enum';
+export * from './enums/hubspotRegistrationPipeline.enum';
 
 // CONSTANTS EXPORTS
 export * from './constants/admin-roles.constant';
