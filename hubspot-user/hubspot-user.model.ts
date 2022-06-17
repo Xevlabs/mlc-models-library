@@ -7,6 +7,7 @@ import { IncomeRangeEnum } from '../enums/income-range.enum';
 import { KycStatusEnum } from '../enums/kyc-status.enum';
 import { MlcKycDocumentLevelEnum } from '../enums/mlc-kyc-document-level.enum';
 import { TransactionStatusEnum } from '../enums/transaction-status.enum';
+import { PatrimonyEnum } from '../enums/patrimony.enum';
 
 export interface HubspotUserModel extends BaseModel, Omit<StrapiHubspotUserForm, 'clientInfo'> {
     clientInfo?: ClientInfoModel
@@ -25,6 +26,8 @@ export interface StrapiHubspotUserForm extends Omit<HubspotUserCreationForm, 'ti
     usCitizen?: boolean,
     socioProfessionalCategory?: SocioProfessionalCategoryEnum,
     incomeRange?: IncomeRangeEnum,
+    nationality?: string,
+    patrimony?: PatrimonyEnum,
     accountDateOfCreation?: string,
     IBAN?: string,
     BIC?: string,
