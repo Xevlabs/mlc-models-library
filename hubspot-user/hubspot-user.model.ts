@@ -8,6 +8,7 @@ import { KycStatusEnum } from '../enums/kyc-status.enum';
 import { MlcKycDocumentLevelEnum } from '../enums/mlc-kyc-document-level.enum';
 import { TransactionStatusEnum } from '../enums/transaction-status.enum';
 import { PatrimonyEnum } from '../enums/patrimony.enum';
+import { TreezorKycLivenessScoreEnum } from '@/typings';
 
 export interface HubspotUserModel extends BaseModel, Omit<StrapiHubspotUserForm, 'clientInfo'> {
     clientInfo?: ClientInfoModel
@@ -41,7 +42,8 @@ export interface StrapiHubspotUserForm extends Omit<HubspotUserCreationForm, 'ti
     kycDocumentLevel?: MlcKycDocumentLevelEnum,
     lastTransactionStatus?: TransactionStatusEnum,
     lastTransactionDate?: string,
-    lastTransactionAmount?: number
+    lastTransactionAmount?: number,
+    livenessStatus?: TreezorKycLivenessScoreEnum
 }
 
 export interface HubspotUserCreationForm {
