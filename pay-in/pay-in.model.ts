@@ -6,9 +6,10 @@ import { StrapiTreezorPayinFormModel } from '../treezor-payin/treezor-payin.mode
 export interface PayInModel extends TimestampModel, Omit<StrapiTreezorPayinFormModel, 'treezorUser' | 'beneficiary'> {
     id: number,
     beneficiary?: BeneficiaryModel,
-    treezorUser?: TreezorUserModel
+    treezorUser?: TreezorUserModel,
+    validatedAt?: string
 }
 
-export interface ClientPayinModel extends Pick<PayInModel, 'id' | 'amount' | 'created_at' | 'payinStatus' | 'messageToUser'> {
+export interface ClientPayinModel extends Pick<PayInModel, 'id' | 'amount' | 'created_at' | 'payinStatus' | 'messageToUser' | 'validatedAt'> {
     beneficiary?: ClientBeneficiaryModel
 }

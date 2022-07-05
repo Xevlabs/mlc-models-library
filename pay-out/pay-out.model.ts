@@ -7,7 +7,8 @@ import { PayoutRefundStatusEnum } from '../enums/payout-refund-status.enum';
 
 export interface PayOutModel extends Omit<StrapiPayoutFormModel, 'treezorUser' | 'beneficiary' | 'created_by_user'>, PopulatedBaseModel {
     beneficiary?: BeneficiaryModel,
-    treezorUser?: TreezorUserModel
+    treezorUser?: TreezorUserModel,
+    validatedAt?: string
 }
 
 export interface StrapiPayoutFormModel extends Omit<TreezorApiPayoutModel, 'payoutId' | 'payoutTypeId' | 'walletId' | 'bankaccountId' | 'beneficiaryId' | 'amount' | 'partnerFee' | 'userId' | 'codeStatus' | 'payoutDate' | 'createdDate' | 'modifiedDate'> {
@@ -34,6 +35,6 @@ export interface PayoutFormModel {
     beneficiaryId: number
 }
 
-export interface ClientPayoutModel extends Pick<PayOutModel, 'id' | 'amount' | 'created_at' | 'payoutStatus' | 'label'> {
+export interface ClientPayoutModel extends Pick<PayOutModel, 'id' | 'amount' | 'created_at' | 'payoutStatus' | 'label' | 'validatedAt'> {
     beneficiary?: ClientBeneficiaryModel
 }
