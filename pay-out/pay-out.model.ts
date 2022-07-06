@@ -32,7 +32,8 @@ export interface StrapiPayoutFormModel extends Omit<TreezorApiPayoutModel, 'payo
 
 export interface PayoutFormModel {
     amount: number,
-    beneficiaryId: number
+    beneficiaryId: number,
+    label?: string
 }
 
 export interface ClientPayoutModel extends Pick<PayOutModel, 'id' | 'amount' | 'created_at' | 'payoutStatus' | 'label' | 'validatedAt'> {
