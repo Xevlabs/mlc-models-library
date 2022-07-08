@@ -7,9 +7,15 @@ export interface InvestmentReportFormModel {
     endDate: number
 }
 
-export interface InvestmentReportPointModel {
+export interface InvestmentReportPointModel extends Omit<InvestmentGraphDataPoint, 'isNow'> {
     date: number,
     balance: number,
     earnings: number,
     transactionValue?: number
+}
+
+export interface InvestmentGraphDataPoint {
+    earnings: number,
+    transactionValue?: number,
+    isNow: boolean
 }
