@@ -1,4 +1,5 @@
 export enum RangeEnum {
     WEEK = 'WEEK',
-    MONTH = 'MONTH'
+    MONTH = 'MONTH',
+    YEAR = 'YEAR'
 }
