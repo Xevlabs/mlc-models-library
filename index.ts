@@ -80,6 +80,7 @@ export * from './enums/gender.enum';
 export * from './enums/dashboard-banner.enum';
 export * from './enums/hubspotRegistrationPipeline.enum';
 export * from './enums/range.enum';
+export * from './enums/action-warning-banner.enum'
 
 // CONSTANTS EXPORTS
 export * from './constants/admin-roles.constant';
